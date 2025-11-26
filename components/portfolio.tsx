@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 const projects = [
@@ -56,6 +56,25 @@ const projects = [
 
 export function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [isInView, setIsInView] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsInView(entry.isIntersecting)
+        })
+      },
+      { threshold: 0 },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -76,85 +95,82 @@ export function Portfolio() {
   }, [])
 
   return (
-    <section id="portfolio" ref={sectionRef} className="relative py-24 md:py-32" style={{ backgroundColor: "#F5F3EE" }}>
-      {/* Vertical "RECENT" text on left side */}
-      <div className="hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 z-10">
+    <section id="portfolio" ref={sectionRef} className="relative" style={{ backgroundColor: "#1B3A34" }}>
+      <div
+        className={`hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 z-10 transition-opacity duration-300 ${
+          isInView ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
         <span
-          className="text-[11px] font-sans tracking-[0.3em] text-[#8B8579]"
+          className="text-[11px] font-sans tracking-[0.3em] text-white/60"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           RECENT
         </span>
       </div>
 
-      {/* Vertical "RECENT" text on right side */}
-      <div className="hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 z-10">
-        <span className="text-[11px] font-sans tracking-[0.3em] text-[#8B8579]" style={{ writingMode: "vertical-rl" }}>
+      <div
+        className={`hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 z-10 transition-opacity duration-300 ${
+          isInView ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <span className="text-[11px] font-sans tracking-[0.3em] text-white/60" style={{ writingMode: "vertical-rl" }}>
           RECENT
         </span>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20">
-        {/* Section Header */}
-        <div className="text-center mb-20 fade-in">
-          <h2
-            className="font-sans text-[13px] md:text-[14px] font-normal uppercase tracking-[0.35em]"
-            style={{ color: "#6B6560" }}
-          >
-            Latest Work
-          </h2>
-        </div>
+      <div className="sticky top-0 z-0 h-screen flex items-center justify-center pointer-events-none">
+        <h2 className="font-sans text-[13px] md:text-[14px] font-normal uppercase tracking-[0.35em] text-white/80">
+          Latest Work
+        </h2>
+      </div>
 
-        {/* Projects Grid - 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 lg:gap-x-10 lg:gap-y-20">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="fade-in group cursor-pointer"
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              {/* Image Container - Tall aspect ratio */}
-              <div className="relative aspect-[3/4] overflow-hidden mb-6">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                />
-              </div>
-
-              {/* Project Info */}
-              <div>
-                {/* Title */}
-                <h3
-                  className="font-sans text-[15px] md:text-[16px] font-normal uppercase tracking-[0.2em] mb-4"
-                  style={{ color: "#3D3A36" }}
-                >
-                  {project.title}
-                </h3>
-
-                {/* Description */}
-                <p className="font-sans text-[14px] leading-[1.7] font-normal mb-5" style={{ color: "#5C5751" }}>
-                  {project.description}
-                </p>
-
-                {/* Categories */}
-                <div className="flex items-center gap-2 flex-wrap">
-                  {project.categories.map((category, catIndex) => (
-                    <span key={catIndex} className="flex items-center gap-2">
-                      <span
-                        className="font-sans text-[11px] font-normal uppercase tracking-[0.15em]"
-                        style={{ color: "#8B8579" }}
-                      >
-                        {category}
-                      </span>
-                      {catIndex < project.categories.length - 1 && <span className="text-[#C5C0B8]">|</span>}
-                    </span>
-                  ))}
+      <div className="relative z-10 -mt-[50vh] pb-32">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+            {projects.map((project, index) => (
+              <article
+                key={project.id}
+                className="fade-in group cursor-pointer"
+                style={{ transitionDelay: `${index * 0.1}s` }}
+              >
+                {/* Image Container - Tall aspect ratio */}
+                <div className="relative aspect-[4/5] overflow-hidden mb-8">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
                 </div>
-              </div>
-            </article>
-          ))}
+
+                {/* Project Info */}
+                <div>
+                  {/* Title */}
+                  <h3 className="font-sans text-[18px] md:text-[20px] font-normal uppercase tracking-[0.2em] mb-4 text-white">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-sans text-[14px] md:text-[15px] leading-[1.8] font-normal mb-5 text-white/80">
+                    {project.description}
+                  </p>
+
+                  {/* Categories */}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {project.categories.map((category, catIndex) => (
+                      <span key={catIndex} className="flex items-center gap-2">
+                        <span className="font-sans text-[11px] font-normal uppercase tracking-[0.15em] text-white/50">
+                          {category}
+                        </span>
+                        {catIndex < project.categories.length - 1 && <span className="text-white/30">|</span>}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
