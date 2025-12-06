@@ -1,0 +1,7 @@
+:HL["/v0-double-r-renovations-website/_next/static/chunks/2dae2d233052203b.css","style"]
+:HL["/v0-double-r-renovations-website/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/v0-double-r-renovations-website/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/v0-double-r-renovations-website/_next/static/chunks/9c2ef1baef60c912.css","style"]
+:HL["/v0-double-r-renovations-website/_next/static/chunks/f18bb58a793405df.css","style"]
+:HL["/craftsman-restoring-vintage-wooden-staircase-1920s.jpg","image"]
+0:{"buildId":"JhF_dr-uUqfquBB_3oaBv","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about","paramType":null,"paramKey":"about","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
