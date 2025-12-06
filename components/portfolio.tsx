@@ -1,178 +1,162 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
+import React, { RefObject, useRef } from "react";
+import { VerticalText } from "./VerticalText";
+import useIntersectionObserver from "./useIntersectionObserver";
+import './portfolio.css';
 
 const projects = [
   {
     id: 1,
-    title: "Craftsman Bungalow",
-    description:
-      "In the heart of Highland Park, this 1920s craftsman bungalow underwent a meticulous restoration. Every original detail was carefully preserved while modern amenities were seamlessly integrated throughout.",
-    categories: ["RESTORATION", "RESIDENTIAL", "2024"],
-    image: "/restored-1920s-craftsman-bungalow-exterior-white-t.jpg",
+    title: "1 Hotel Copenhagen",
+    description: "A meticulous restoration, seamlessly integrating modern amenities while preserving original details.",
+    categories: ["HOSPITALITY", "RESTORATION", "2024"],
+    image: "/prairie-style-home-restoration-living-room-firepla.jpg",
+    layout: "landscape",
   },
   {
     id: 2,
-    title: "Tudor Revival Estate",
-    description:
-      "A comprehensive renovation of a distinguished Tudor Revival estate in University Park. The project balanced historic authenticity with contemporary living requirements.",
-    categories: ["RENOVATION", "RESIDENTIAL", "2024"],
-    image: "/tudor-revival-home-renovation-elegant-interior.jpg",
-  },
-  {
-    id: 3,
-    title: "Prairie Style Residence",
-    description:
-      "This Oak Cliff prairie style home stands as a testament to thoughtful restoration. The interior unfolds as a composition of horizontal lines and natural materials.",
-    categories: ["RESTORATION", "RESIDENTIAL", "2023"],
-    image: "/prairie-style-home-restoration-living-room-firepla.jpg",
+    title: "Galleri Sonja",
+    description: "A comprehensive renovation, balancing historic authenticity with contemporary living.",
+    categories: ["CULTURE", "RENOVATION", "2024"],
+    image: "/elegant-1920s-craftsman-home-interior-woodwork.jpg",
+    layout: "portrait",
   },
   {
     id: 4,
-    title: "Spanish Colonial Revival",
-    description:
-      "Amid the tree-lined streets of Lakewood, this Spanish Colonial Revival was sensitively expanded. The period addition honors the original architecture while providing modern functionality.",
-    categories: ["ADDITION", "RESIDENTIAL", "2023"],
-    image: "/spanish-colonial-home-courtyard-renovation.jpg",
+    title: "Guest House No. 16",
+    description: "A sensitive expansion, honoring the original architecture while providing modern functionality.",
+    categories: ["HOSPITALITY", "ADDITION", "2023"],
+    image: "/georgian-colonial-home-grand-staircase-restoration.jpg",
+    layout: "portrait",
   },
   {
     id: 5,
-    title: "Georgian Colonial Manor",
-    description:
-      "A grand Georgian Colonial in Preston Hollow restored to its original splendor. The project celebrates classical proportions and refined craftsmanship throughout.",
-    categories: ["RESTORATION", "RESIDENTIAL", "2023"],
-    image: "/georgian-colonial-home-grand-staircase-restoration.jpg",
+    title: "Joinery Stool",
+    description: "Design | Furniture | 2025",
+    categories: ["DESIGN", "FURNITURE", "2025"],
+    image: "/spanish-colonial-home-courtyard-renovation.jpg",
+    layout: "portrait",
   },
   {
     id: 6,
-    title: "Arts & Crafts Cottage",
-    description:
-      "This charming M Streets cottage embraces the Arts & Crafts philosophy. Every detail within is guided by intention as the interior unfolds as a study in warmth.",
-    categories: ["RENOVATION", "RESIDENTIAL", "2022"],
-    image: "/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg",
+    title: "Strandgården",
+    description: "Architecture | Residential | 2025",
+    categories: ["ARCHITECTURE", "RESIDENTIAL", "2025"],
+    image: "/victorian-home-interior-elegant-living-room-firepl.jpg",
+    layout: "portrait",
   },
-]
+  {
+    id: 7,
+    title: "Audo House",
+    description: "A place where architecture and interior design shape experience.",
+    categories: ["ARCHITECTURE", "INTERIOR", "2025"],
+    image: "/colonial-home-interior-classic-elegant-entryway-st.jpg",
+    layout: "landscape",
+  },
+];
 
-export function Portfolio() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const [isInView, setIsInView] = useState(false)
+interface PortfolioProps {
+  sectionRef?: RefObject<HTMLElement>;
+  isVisible?: boolean;
+  showVerticalText?: boolean;
+  backgroundColor?: string;
+}
 
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsInView(entry.isIntersecting)
-        })
-      },
-      { threshold: 0 },
-    )
-
-    observer.observe(section)
-
-    return () => observer.disconnect()
-  }, [])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible")
-          }
-        })
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
-    )
-
-    const elements = sectionRef.current?.querySelectorAll(".fade-in")
-    elements?.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
+export function Portfolio({ sectionRef: externalRef, isVisible: externalIsVisible, showVerticalText = false, backgroundColor = '#000' }: PortfolioProps) {
+  const internalRef = useRef<HTMLElement>(null);
+  const sectionRef = externalRef || internalRef;
+  const isVisible = externalIsVisible !== undefined ? externalIsVisible : useIntersectionObserver(sectionRef, { threshold: 0.5 });
 
   return (
-    <section id="portfolio" ref={sectionRef} className="relative" style={{ backgroundColor: "#1B3A34" }}>
-      <div
-        className={`hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 z-10 transition-opacity duration-300 ${
-          isInView ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <span
-          className="text-[11px] font-sans tracking-[0.3em] text-white/60"
-          style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-        >
-          RECENT
-        </span>
-      </div>
+    <section
+      id="portfolio"
+      ref={sectionRef}
+      className="latest-work-section"
+      style={{ backgroundColor }}
+    >
+      <div className={`flex justify-center transition-opacity duration-1000 ease-in ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        {showVerticalText && <VerticalText side="left" isVisible={isVisible} />}
+        <div className="flex-grow max-w-none mx-auto px-4 md:px-12">
+          <header className="text-center mb-[60px]">
+            <h2 className="inline-block font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-white mb-4">
+              Latest Work
+            </h2>
+            <p className="font-serif font-semibold text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.015em] text-white">
+              Showcasing timeless renovations
+            </p>
+          </header>
 
-      <div
-        className={`hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 z-10 transition-opacity duration-300 ${
-          isInView ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <span className="text-[11px] font-sans tracking-[0.3em] text-white/60" style={{ writingMode: "vertical-rl" }}>
-          RECENT
-        </span>
-      </div>
-
-      <div className="sticky top-0 z-0 h-screen flex items-center justify-center pointer-events-none">
-        <h2 className="font-sans text-[13px] md:text-[14px] font-normal uppercase tracking-[0.35em] text-white/80">
-          Latest Work
-        </h2>
-      </div>
-
-      <div className="relative z-10 -mt-[50vh] pb-32">
-        <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-            {projects.map((project, index) => (
+          <div className="gallery-row">
+            {projects.slice(0, 3).map((project, index) => (
               <article
                 key={project.id}
-                className="fade-in group cursor-pointer"
-                style={{ transitionDelay: `${index * 0.1}s` }}
+                className={`work-item ${project.title === "1 Hotel Copenhagen" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
-                {/* Image Container - Tall aspect ratio */}
-                <div className="relative aspect-[4/5] overflow-hidden mb-8">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
+                <div className="mb-2">
+                  <span className="text-[11px] uppercase text-gray-500">VIEW</span>
+                </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
                     alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className="work-image"
                   />
                 </div>
-
-                {/* Project Info */}
-                <div>
-                  {/* Title */}
-                  <h3 className="font-sans text-[18px] md:text-[20px] font-normal uppercase tracking-[0.2em] mb-4 text-white">
+                <div className="text-content">
+                  <h3 className="font-serif uppercase text-[14px] tracking-[2px] mb-[12px] text-white">
                     {project.title}
                   </h3>
-
-                  {/* Description */}
-                  <p className="font-sans text-[14px] md:text-[15px] leading-[1.8] font-normal mb-5 text-white/80">
+                  <p className="font-sans text-[12px] leading-[1.6] text-white mb-[15px]">
                     {project.description}
                   </p>
+                  <p className="font-sans text-[10px] uppercase tracking-[1px] underline text-white">
+                    {project.categories.join(' | ')}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
 
-                  {/* Categories */}
-                  <div className="flex items-center gap-2 flex-wrap">
-                    {project.categories.map((category, catIndex) => (
-                      <span key={catIndex} className="flex items-center gap-2">
-                        <span className="font-sans text-[11px] font-normal uppercase tracking-[0.15em] text-white/50">
-                          {category}
-                        </span>
-                        {catIndex < project.categories.length - 1 && <span className="text-white/30">|</span>}
-                      </span>
-                    ))}
-                  </div>
+          <div className="gallery-row" style={{ marginTop: '80px' }}>
+            {projects.slice(3, 6).map((project, index) => (
+              <article
+                key={project.id}
+                className={`work-item ${project.title === "Audo House" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
+                style={{ transitionDelay: `${(index + 3) * 150}ms` }}
+              >
+                <div className="mb-2">
+                  <span className="text-[11px] uppercase text-gray-500">VIEW</span>
+                </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="work-image"
+                  />
+                </div>
+                <div className="text-content">
+                  <h3 className="font-serif uppercase text-[14px] tracking-[2px] mb-[12px] text-white">
+                    {project.title}
+                  </h3>
+                  <p className="font-sans text-[12px] leading-[1.6] text-white mb-[15px]">
+                    {project.description}
+                  </p>
+                  <p className="font-sans text-[10px] uppercase tracking-[1px] underline text-white">
+                    {project.categories.join(' | ')}
+                  </p>
                 </div>
               </article>
             ))}
           </div>
         </div>
+        {showVerticalText && <VerticalText side="right" isVisible={isVisible} />}
       </div>
     </section>
-  )
+  );
 }

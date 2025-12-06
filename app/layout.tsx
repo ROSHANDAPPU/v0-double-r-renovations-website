@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Cormorant_Garamond, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { Header } from "@/components/header"
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${inter.variable}`}>
       <body className="font-sans antialiased bg-black text-white">
+        <Header />
         {children}
         <Analytics />
       </body>

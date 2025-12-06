@@ -1,0 +1,15 @@
+.serviceImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: scale(1.05);
+}
+
+.serviceImage.active {
+  opacity: 1;
+  transform: scale(1);
+}

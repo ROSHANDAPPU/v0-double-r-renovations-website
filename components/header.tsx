@@ -5,11 +5,11 @@ import Link from "next/link"
 import { Menu, X, Search } from "lucide-react"
 
 const navLinks = [
-  { href: "#portfolio", label: "PORTFOLIO" },
-  { href: "#services", label: "SERVICES" },
-  { href: "#process", label: "PROCESS" },
-  { href: "#about", label: "ABOUT" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "/portfolio", label: "PORTFOLIO" },
+  { href: "/services", label: "SERVICES" },
+  { href: "/process", label: "PROCESS" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/contact", label: "CONTACT" },
 ]
 
 export function Header() {

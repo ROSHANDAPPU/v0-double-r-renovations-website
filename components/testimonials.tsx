@@ -58,8 +58,11 @@ export function Testimonials() {
   }
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-black">
-      <div className="max-w-[900px] mx-auto px-5 md:px-10 text-center">
+    <section
+      ref={sectionRef}
+      className="py-24 md:py-32 bg-black"
+    >
+      <div className="max-w-[900px] mx-auto px-5 md:px-10 text-center bg-black/50 backdrop-blur-sm py-12 rounded-lg">
         {/* Section Header */}
         <div className="mb-12 fade-in">
           <span className="inline-block font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-[#1B3A34] mb-4">
@@ -71,23 +74,32 @@ export function Testimonials() {
         </div>
 
         {/* Testimonial Content */}
-        <div className="fade-in relative">
-          <blockquote className="mb-8">
-            <p className="font-serif text-[24px] md:text-[32px] font-normal italic leading-[1.5] text-white">
-              &ldquo;{testimonials[currentIndex].quote}&rdquo;
-            </p>
-          </blockquote>
-          <div className="font-sans text-[15px] text-white">
-            <span className="text-white font-medium">{testimonials[currentIndex].author}</span>
-            <span className="mx-2">—</span>
-            <span className="text-white/70">{testimonials[currentIndex].location}</span>
+        <div className="fade-in relative overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="w-full flex-shrink-0">
+                <blockquote className="mb-8">
+                  <p className="font-serif text-[24px] md:text-[32px] font-normal italic leading-[1.5] text-white">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                </blockquote>
+                <div className="font-sans text-[15px] text-white">
+                  <span className="text-white font-medium">{testimonial.author}</span>
+                  <span className="mx-2">—</span>
+                  <span className="text-white/70">{testimonial.location}</span>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-6 mt-10">
             <button
               onClick={prevTestimonial}
-              className="p-2 border border-[#2a2a2a] text-white hover:border-[#1B3A34] hover:text-[#1B3A34] transition-colors"
+              className="p-2 border border-[#2a2a2a] text-white hover:border-[#1B3A34] hover:bg-[#1B3A34] transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -98,7 +110,7 @@ export function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? "bg-[#1B3A34]" : "bg-[#2a2a2a]"
+                    index === currentIndex ? "bg-[#1B3A34]" : "bg-[#2a2a2a] hover:bg-white/50"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -106,7 +118,7 @@ export function Testimonials() {
             </div>
             <button
               onClick={nextTestimonial}
-              className="p-2 border border-[#2a2a2a] text-white hover:border-[#1B3A34] hover:text-[#1B3A34] transition-colors"
+              className="p-2 border border-[#2a2a2a] text-white hover:border-[#1B3A34] hover:bg-[#1B3A34] transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
