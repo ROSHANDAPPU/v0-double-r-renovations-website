@@ -11,7 +11,7 @@ const slides = [
     title: "CRAFTSMAN REVIVAL",
     description:
       "Nestled in the historic heart of Portland, this 1920s Craftsman bungalow has been meticulously restored to honor its original character. Rich woodwork, period-appropriate fixtures, and modern amenities blend seamlessly to create a home that celebrates its heritage while embracing contemporary living.",
-    image: "https://picsum.photos/800/600?random=1",
+    image: "/elegant-craftsman-home-interior-with-wood-details-.jpg",
   },
   {
     id: 2,
