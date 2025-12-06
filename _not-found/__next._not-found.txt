@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[85297,["/v0-double-r-renovations-website/_next/static/chunks/98d46dacddbb03af.js","/v0-double-r-renovations-website/_next/static/chunks/734d7f418d808671.js"],"default"]
+3:I[40398,["/v0-double-r-renovations-website/_next/static/chunks/98d46dacddbb03af.js","/v0-double-r-renovations-website/_next/static/chunks/734d7f418d808671.js"],"default"]
+0:{"buildId":"ILfZPaOXKgkOdIYzdGKpm","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
