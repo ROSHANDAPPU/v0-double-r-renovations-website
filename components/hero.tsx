@@ -67,7 +67,7 @@ const slides = [
     title: "PRAIRIE STYLE LIVING",
     description:
       "A Prairie Style home renovation that honors Frank Lloyd Wright's architectural principles. Horizontal lines, natural materials, and an organic connection to the landscape create a uniquely American aesthetic.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "/images/prairie-style-home-restoration-living-room-firepla.jpg",
   },
   {
     id: 10,
