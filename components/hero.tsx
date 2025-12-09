@@ -53,7 +53,7 @@ const slides = [
     title: "SPANISH COLONIAL",
     description:
       "A beautiful Spanish Colonial courtyard renovation that preserves the architectural heritage of this distinctive style. Arched doorways, tile work, and lush landscaping create an oasis of Mediterranean charm in a modern setting.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://cdn.vox-cdn.com/thumbor/VfBGkmqnyXW1apnKHoOS4xLx6i8=/0x0:6720x4480/1200x0/filters:focal(0x0:6720x4480):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19791815/07.jpg",
   },
   {
     id: 8,
