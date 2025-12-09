@@ -11,7 +11,7 @@ const slides = [
     title: "CRAFTSMAN REVIVAL",
     description:
       "Nestled in the historic heart of Portland, this 1920s Craftsman bungalow has been meticulously restored to honor its original character. Rich woodwork, period-appropriate fixtures, and modern amenities blend seamlessly to create a home that celebrates its heritage while embracing contemporary living.",
-    image: "https://media.houseandgarden.co.uk/photos/62e012c1260f7ae37edaa794/master/w_1600%2Cc_limit/MFOX8726.jpg",
+    image: "https://media.houseandgarden.co.uk/photos/68372a036258cde52f342970/master/w_1600%2Cc_limit/04-25-25-HG-Russell262.jpg",
   },
   {
     id: 2,
@@ -67,49 +67,49 @@ const slides = [
     title: "PRAIRIE STYLE LIVING",
     description:
       "A Prairie Style home renovation that honors Frank Lloyd Wright's architectural principles. Horizontal lines, natural materials, and an organic connection to the landscape create a uniquely American aesthetic.",
-    image: "/images/prairie-style-home-restoration-living-room-firepla.jpg",
+    image: "https://images.squarespace-cdn.com/content/v1/596e6d26d482e936f28ec1c0/1753889385973-9UO4HCVMJO91EQDELI26/16_Schriber_library_00009.jpg",
   },
   {
     id: 10,
     title: "CRAFTSMAN BUNGALOW",
     description:
       "A charming 1920s Craftsman bungalow exterior restoration that maintains the original character while updating systems and finishes. The result is a home that looks as good as the day it was built.",
-    image: "https://www.remodelista.com/wp-content/uploads/2023/11/anne-mcdonald-072423-1.jpeg",
+    image: "https://media.architecturaldigest.com/photos/668d4a77d9b723d8d6fbb0eb/16:9/w_2560%2Cc_limit/02.TREEHAVEN.jpg",
   },
   {
     id: 11,
     title: "ELEGANT CRAFTSMAN INTERIOR",
     description:
       "An elegant Craftsman interior featuring rich wood details and period-appropriate furnishings. The restoration work preserves the original architectural elements while creating comfortable, modern living spaces.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://www.remodelista.com/wp-content/uploads/2023/11/anne-mcdonald-072423-1.jpeg",
   },
   {
     id: 12,
     title: "RICH WOODWORK CRAFTSMAN",
     description:
       "A Craftsman home showcasing rich woodwork and intricate detailing. The restoration highlights the craftsmanship of the original builders while providing the durability and comfort required by contemporary homeowners.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://www.acmdesignarchitects.com/wp-content/uploads/2017/04/craftsman-style-kitchen-wood-cabinets.jpg",
   },
   {
     id: 13,
     title: "CRAFTSMAN STAIRCASE",
     description:
       "A vintage Craftsman staircase restoration that demonstrates the attention to detail required for historic preservation. Handcrafted elements and period-appropriate materials ensure authenticity and longevity.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://gstatic1.promeai.pro/gallery/publish/2025/01/22/25a100cc4131412aa3eebed741b8363a.jpg",
   },
   {
     id: 14,
     title: "VICTORIAN FIREPLACE",
     description:
       "A Victorian home interior featuring an elegant living room with a restored fireplace. The renovation work preserves the architectural integrity while updating the space for modern comfort and functionality.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://media.houseandgarden.co.uk/photos/67dc464c0f2847aedf2da20b/master/w_1600%2Cc_limit/Shot05117_RT-production_digital.jpg",
   },
   {
     id: 15,
     title: "FARMHOUSE BEAMS",
     description:
       "A farmhouse interior with rustic beams and modern white walls. The renovation balances historic charm with contemporary design, creating a space that's both comfortable and stylish.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://vintageharvestlumber.com/cdn/shop/articles/AdobeStock_336803564.jpg?v=1638210327",
   },
   {
     id: 16,
@@ -123,7 +123,7 @@ const slides = [
     title: "ARTS & CRAFTS COTTAGE",
     description:
       "An Arts & Crafts cottage kitchen renovation that preserves the movement's emphasis on craftsmanship and natural materials. Handcrafted elements and period-appropriate design create a harmonious space.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://media.houseandgarden.co.uk/photos/68372a036258cde52f342970/master/w_1600%2Cc_limit/04-25-25-HG-Russell262.jpg",
   },
   {
     id: 18,
