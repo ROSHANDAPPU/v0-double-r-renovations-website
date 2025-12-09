@@ -12,7 +12,7 @@ export default function ServicesPage() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/prairie-style-home-restoration-living-room-firepla.jpg"
+            src="/images/prairie-style-home-restoration-living-room-firepla.jpg"
             alt="Services background"
             className="w-full h-full object-cover"
           />
