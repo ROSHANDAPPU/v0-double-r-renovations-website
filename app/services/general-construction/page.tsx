@@ -26,17 +26,17 @@ export default function GeneralConstructionPage() {
         {/* BOX WITH QUICK NUMBERS */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="border border-[#C5B388] p-8">
+            <div className="border border-[#1B3A34] p-8">
               <h3 className="text-sm uppercase tracking-[0.2em] text-[#CCCCCC] mb-3">Est. Price</h3>
-              <p className="text-3xl font-bold text-[#C5B388]">$50k+</p>
+              <p className="text-3xl font-bold text-[#1B3A34]">$50k+</p>
             </div>
-            <div className="border border-[#C5B388] p-8">
+            <div className="border border-[#1B3A34] p-8">
               <h3 className="text-sm uppercase tracking-[0.2em] text-[#CCCCCC] mb-3">Lead Time</h3>
-              <p className="text-3xl font-bold text-[#C5B388]">6-12 Weeks</p>
+              <p className="text-3xl font-bold text-[#1B3A34]">6-12 Weeks</p>
             </div>
-            <div className="border border-[#C5B388] p-8">
+            <div className="border border-[#1B3A34] p-8">
               <h3 className="text-sm uppercase tracking-[0.2em] text-[#CCCCCC] mb-3">Work On Site</h3>
-              <p className="text-3xl font-bold text-[#C5B388]">4-8 Weeks</p>
+              <p className="text-3xl font-bold text-[#1B3A34]">4-8 Weeks</p>
             </div>
           </div>
         </section>
@@ -44,7 +44,7 @@ export default function GeneralConstructionPage() {
         {/* KEY FEATURES */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C5B388] mb-10 text-center">Key Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A34] mb-10 text-center">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">Structural Integrity</h3>
@@ -89,12 +89,12 @@ export default function GeneralConstructionPage() {
         {/* PRICING */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C5B388] mb-6">Pricing</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A34] mb-6">Pricing</h2>
             <p className="text-lg text-[#CCCCCC] mb-8">
               Pricing varies based on project scope, materials, and complexity.
               Contact us for a detailed quote tailored to your construction needs.
             </p>
-            <button className="bg-[#C5B388] text-black px-8 py-3 font-semibold hover:bg-[#B5A078] transition-colors">
+            <button className="bg-[#1B3A34] text-black px-8 py-3 font-semibold hover:bg-[#B5A078] transition-colors">
               Request a Quote
             </button>
           </div>
@@ -103,7 +103,7 @@ export default function GeneralConstructionPage() {
         {/* WARRANTIES */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C5B388] mb-10 text-center">Warranties</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A34] mb-10 text-center">Warranties</h2>
             <div className="space-y-8 text-[#CCCCCC]">
               <p>
                 Our general construction work is backed by comprehensive warranties ensuring peace of mind.
@@ -120,7 +120,7 @@ export default function GeneralConstructionPage() {
         {/* FAQ’s */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C5B388] mb-10 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1B3A34] mb-10 text-center">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <div className="border-b border-[#333333] pb-4">
                 <h3 className="text-xl font-semibold mb-2">Do you handle permits?</h3>
@@ -151,7 +151,7 @@ export default function GeneralConstructionPage() {
             <p className="text-lg text-[#CCCCCC] mb-8">
               Contact us today for expert general construction and framing services.
             </p>
-            <button className="bg-[#C5B388] text-black px-10 py-4 font-semibold text-lg hover:bg-[#B5A078] transition-colors">
+            <button className="bg-[#1B3A34] text-black px-10 py-4 font-semibold text-lg hover:bg-[#B5A078] transition-colors">
               Get Started
             </button>
           </div>
