@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[28,["/_next/static/chunks/0406e47ece6f166b.js","/_next/static/chunks/734d7f418d808671.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"tEiZj7J-5E2-JEVsPFuPw","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-black text-white","children":["$","div",null,{"className":"container mx-auto px-4 py-16","children":[["$","h1",null,{"className":"text-4xl font-serif","children":"Kitchens"}],["$","p",null,{"className":"mt-4","children":"Details about Kitchens services."}]]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"0ftv8D6GllhT9Yjba9B9w","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-black text-white","children":["$","div",null,{"className":"container mx-auto px-4 py-16","children":[["$","h1",null,{"className":"text-4xl font-serif","children":"Kitchens"}],["$","p",null,{"className":"mt-4","children":"Details about Kitchens services."}]]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
