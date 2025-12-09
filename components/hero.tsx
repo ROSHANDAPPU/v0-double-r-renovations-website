@@ -46,7 +46,7 @@ const slides = [
     title: "TUDOR REVIVAL",
     description:
       "An elegant Tudor revival home restored with meticulous attention to architectural authenticity. Intricate woodwork, stained glass, and period-appropriate finishes bring this historic style back to life for modern occupants.",
-    image: "/images/tudor-revival-home-renovation-elegant-interior.jpg",
+    image: "https://www.freep.com/gcdn/presto/2019/07/23/PDTF/af82b312-f155-4c30-b4fe-7c8e04c2fb8a-HouseEnvy_072319_04_MW.jpg",
   },
   {
     id: 7,
