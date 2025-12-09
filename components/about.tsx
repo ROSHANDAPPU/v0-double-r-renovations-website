@@ -2,10 +2,14 @@ import React from 'react';
 import './About.css';
 import { Portfolio } from './portfolio';
 import { CTA } from './cta';
+import { Header } from './header';
+import { Footer } from './footer';
 
 const About = () => {
   return (
-    <div className="about-page-container">
+    <main className="min-h-screen bg-black">
+      <Header />
+      <div className="about-page-container">
 
       {/* 1. THE STORY SECTION (Split Screen) */}
       <section className="about-story-section">
@@ -97,7 +101,9 @@ const About = () => {
       <Portfolio backgroundColor="#1B3A34" />
       <CTA />
 
-    </div>
+      </div>
+      <Footer />
+    </main>
   );
 };
 
