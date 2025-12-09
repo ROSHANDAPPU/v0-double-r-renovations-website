@@ -25,28 +25,28 @@ const slides = [
     title: "HERITAGE FARMHOUSE",
     description:
       "This century-old farmhouse has been lovingly renovated to preserve its rustic charm while introducing contemporary functionality. Exposed beams, reclaimed materials, and artisanal finishes create spaces that feel both timeless and fresh.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://images.ctfassets.net/wlzmdirin2hy/4CdXvxkc2gZbfjO94w2yNJ/adc9b2b18f9ba118adb70ac9b0a09e13/LX_PNW80_HOM_Lawton_GARMAN_KM160-HDR-Edit.jpg?w=3840&q=100",
   },
   {
     id: 4,
     title: "COLONIAL RESTORATION",
     description:
       "A distinguished Colonial home brought back to its former glory through extensive restoration work. Classic proportions, refined details, and a neutral palette create an atmosphere of understated elegance that honors the home's storied past.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://www.boardandvellum.com/wp-content/uploads/2017/11/3x2-colonial_restoration_on_the_hill-foyer-cut_full.jpg",
   },
   {
     id: 5,
     title: "ARTS & CRAFTS KITCHEN",
     description:
       "A vintage kitchen renovation that combines Arts & Crafts styling with modern functionality. Handcrafted cabinets, period lighting, and contemporary appliances create a space that's both historically accurate and perfectly suited for today's lifestyle.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://st.hzcdn.com/simgs/pictures/kitchens/saint-paul-craftsman-david-heide-design-studio-img~4741fe870617f87a_14-6780-1-2d8717c.jpg",
   },
   {
     id: 6,
     title: "TUDOR REVIVAL",
     description:
       "An elegant Tudor revival home restored with meticulous attention to architectural authenticity. Intricate woodwork, stained glass, and period-appropriate finishes bring this historic style back to life for modern occupants.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "/images/tudor-revival-home-renovation-elegant-interior.jpg",
   },
   {
     id: 7,
