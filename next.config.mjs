@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/v0-double-r-renovations-website',
   typescript: {
     ignoreBuildErrors: true,
   },
