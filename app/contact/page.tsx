@@ -2,19 +2,36 @@
 
 import React, { useState } from "react"
 import Image from "next/image"
+import './ContactForm.css';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    serviceType: '',
     message: ''
   })
+  const [selectedService, setSelectedService] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const serviceOptions = [
+    { id: 'remodel', title: 'Full-Home Remodels', price: '$75,000' },
+    { id: 'kitchens', title: 'Kitchens', price: '$25,000' },
+    { id: 'bathrooms', title: 'Bathrooms', price: '$12,000' },
+    { id: 'flooring', title: 'Flooring', price: '$6/sq ft installed' },
+    { id: 'construction', title: 'General Construction', price: '$2,500' },
+    { id: 'cabinetry', title: 'Custom Cabinetry', price: '$4,500' },
+    { id: 'painting', title: 'Interior Painting', price: '$2,000 (per room)' },
+    { id: 'demo', title: 'Selective Demolition', price: '$1,500 (per room)' },
+  ];
+
+  const getSelectedPrice = () => {
+    const service = serviceOptions.find(s => s.id === selectedService);
+    return service ? service.price : null;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
@@ -22,14 +39,16 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    console.log('Form submitted:', formData)
+    const finalFormData = { ...formData, serviceType: selectedService };
+    console.log('Form submitted:', finalFormData)
 
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000))
 
     setIsSubmitting(false)
     setIsSubmitted(true)
-    setFormData({ name: '', phone: '', email: '', serviceType: '', message: '' })
+    setFormData({ name: '', phone: '', email: '', message: '' })
+    setSelectedService('');
 
     setTimeout(() => {
       setIsSubmitted(false)
@@ -123,26 +142,34 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div>
-                <label className="text-[10px] uppercase tracking-[0.2em] text-[#CCCCCC] mb-3 block">
-                  SERVICE TYPE
-                </label>
-                <select
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleInputChange}
-                  className="w-full bg-transparent border-0 border-b border-white text-white focus:outline-none focus:border-[#CCCCCC] pb-2 text-base appearance-none"
-                  required
-                  disabled={isSubmitting}
-                >
-                  <option value="" disabled className="text-black">Select a service</option>
-                  <option value="Full Home Remodels" className="text-black">Full Home Remodels</option>
-                  <option value="General Construction" className="text-black">General Construction</option>
-                  <option value="Interior Painting" className="text-black">Interior Painting</option>
-                  <option value="Kitchens" className="text-black">Kitchens</option>
-                  <option value="Bathrooms" className="text-black">Bathrooms</option>
-                </select>
+              {/* --- THE NEW SERVICE GRID --- */}
+              <div className="form-group">
+                <label className="text-[10px] uppercase tracking-[0.2em] text-[#CCCCCC] mb-3 block">SERVICE TYPE *</label>
+                <div className="service-grid">
+                  {serviceOptions.map((option) => (
+                    <div 
+                      key={option.id}
+                      className={`service-card ${selectedService === option.id ? 'active' : ''}`}
+                      onClick={() => setSelectedService(option.id)}
+                    >
+                      <span className="service-title">{option.title}</span>
+                      <span className="service-subtitle">Starting at {option.price}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+
+              {/* --- THE MISSING PRICING BOX --- */}
+              {/* Only show this block if a service is selected */}
+              {selectedService && (
+                <div className="pricing-summary-box">
+                  <span className="pricing-label">STARTING FROM</span>
+                  <span className="pricing-amount">{getSelectedPrice()}</span>
+                  <span className="pricing-disclaimer">
+                    Final pricing depends on project scope and specifications.
+                  </span>
+                </div>
+              )}
 
               <div>
                 <label className="text-[10px] uppercase tracking-[0.2em] text-[#CCCCCC] mb-3 block">
