@@ -1,4 +1,6 @@
 "use client"
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 import React from "react"
 import Image from "next/image"
@@ -6,10 +8,29 @@ import Image from "next/image"
 export default function KitchensPage() {
   return (
     <>
+      {/* Simple Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 h-[70px] md:h-[80px] bg-black/95 backdrop-blur-sm">
+        <div className="h-full px-6 md:px-10 lg:px-12 flex items-center justify-between">
+          <Link
+            href="/"
+            className="font-sans text-[13px] md:text-[14px] font-normal text-white tracking-[0.25em] uppercase"
+          >
+            Double R Renovations
+          </Link>
+          <Link
+            href="/services"
+            className="flex items-center gap-2 text-white hover:text-white/80 transition-colors"
+          >
+            <ArrowLeft size={20} />
+            <span className="text-[11px] font-sans font-normal tracking-[0.2em] uppercase">Back to Services</span>
+          </Link>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg')` }}
+        style={{ marginTop: '80px', backgroundImage: `url('/images/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg')` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 text-center">
