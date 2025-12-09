@@ -9,7 +9,7 @@ export default function HistoricHousesRemodelingPage() {
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/v0-double-r-renovations-website/images/elegant-1920s-craftsman-home-interior-woodwork.jpg')` }}
+        style={{ backgroundImage: `url('/images/elegant-1920s-craftsman-home-interior-woodwork.jpg')` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 text-center">
@@ -161,17 +161,17 @@ export default function HistoricHousesRemodelingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Placeholder for project cards */}
                 <div className="bg-[#1a1a1a] p-6">
-                    <Image src="/v0-double-r-renovations-website/images/prairie-style-home-restoration-living-room-firepla.jpg" alt="Project 1" width={400} height={300} className="w-full h-48 object-cover mb-4" />
+                    <Image src="/images/prairie-style-home-restoration-living-room-firepla.jpg" alt="Project 1" width={400} height={300} className="w-full h-48 object-cover mb-4" />
                     <h3 className="text-xl font-semibold mb-2">1920s Prairie Style Restoration</h3>
                     <p className="text-[#CCCCCC]">Full interior and exterior renovation maintaining period details.</p>
                 </div>
                 <div className="bg-[#1a1a1a] p-6">
-                    <Image src="/v0-double-r-renovations-website/images/tudor-revival-home-renovation-elegant-interior.jpg" alt="Project 2" width={400} height={300} className="w-full h-48 object-cover mb-4" />
+                    <Image src="/images/tudor-revival-home-renovation-elegant-interior.jpg" alt="Project 2" width={400} height={300} className="w-full h-48 object-cover mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Tudor Revival Elegance</h3>
                     <p className="text-[#CCCCCC]">Updating modern living while preserving Tudor charm.</p>
                 </div>
                 <div className="bg-[#1a1a1a] p-6">
-                    <Image src="/v0-double-r-renovations-website/images/victorian-home-interior-elegant-living-room-firepl.jpg" alt="Project 3" width={400} height={300} className="w-full h-48 object-cover mb-4" />
+                    <Image src="/images/victorian-home-interior-elegant-living-room-firepl.jpg" alt="Project 3" width={400} height={300} className="w-full h-48 object-cover mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Victorian Grandeur Renewed</h3>
                     <p className="text-[#CCCCCC]">Careful restoration of intricate Victorian details.</p>
                 </div>

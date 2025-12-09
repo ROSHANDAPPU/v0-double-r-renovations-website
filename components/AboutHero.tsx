@@ -15,7 +15,7 @@ export default function AboutHero() {
       style={{
         marginTop: "80px",
         backgroundImage:
-          "url('/v0-double-r-renovations-website/images/elegant-1920s-craftsman-home-interior-with-rich-wo.jpg')",
+          "url('/images/elegant-1920s-craftsman-home-interior-with-rich-wo.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
