@@ -18,14 +18,14 @@ const slides = [
     title: "VICTORIAN ELEGANCE",
     description:
       "A stately Victorian residence transformed with careful attention to architectural detail. Original crown moldings, restored hardwood floors, and custom millwork tell the story of craftsmanship spanning generations, while thoughtful updates ensure comfort for modern families.",
-    image: "/images/victorian-home-interior-elegant-living-room-firepl.jpg",
+    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
   },
   {
     id: 3,
     title: "HERITAGE FARMHOUSE",
     description:
       "This century-old farmhouse has been lovingly renovated to preserve its rustic charm while introducing contemporary functionality. Exposed beams, reclaimed materials, and artisanal finishes create spaces that feel both timeless and fresh.",
-    image: "/images/farmhouse-interior-rustic-beams-white-walls-modern.jpg",
+    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
   },
   {
     id: 4,
