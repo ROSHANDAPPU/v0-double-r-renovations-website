@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[28,["/_next/static/chunks/0406e47ece6f166b.js","/_next/static/chunks/734d7f418d808671.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"NinKDSgd5F9FeNlH2gJes","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-black text-white","children":["$","div",null,{"className":"container mx-auto px-4 py-16","children":[["$","h1",null,{"className":"text-4xl font-serif","children":"General Construction & Framing"}],["$","p",null,{"className":"mt-4","children":"Details about General Construction & Framing services."}]]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"W2fwAxIV2j6d1zJxNsgtS","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-black text-white","children":["$","div",null,{"className":"container mx-auto px-4 py-16","children":[["$","h1",null,{"className":"text-4xl font-serif","children":"General Construction & Framing"}],["$","p",null,{"className":"mt-4","children":"Details about General Construction & Framing services."}]]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null

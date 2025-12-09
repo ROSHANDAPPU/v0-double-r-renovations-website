@@ -18,7 +18,7 @@ const slides = [
     title: "VICTORIAN ELEGANCE",
     description:
       "A stately Victorian residence transformed with careful attention to architectural detail. Original crown moldings, restored hardwood floors, and custom millwork tell the story of craftsmanship spanning generations, while thoughtful updates ensure comfort for modern families.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://images.ctfassets.net/3s5io6mnxfqz/5C3t8ALJh4KygvPnwhGTCr/51083d5d3ba71659e7653a5e4384a76a/victorian-interior-design-guide.jpeg?w=1920",
   },
   {
     id: 3,
