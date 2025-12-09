@@ -1,0 +1,5 @@
+:HL["/v0-double-r-renovations-website/_next/static/chunks/02f446a3a75bc89e.css","style"]
+:HL["/v0-double-r-renovations-website/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/v0-double-r-renovations-website/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/v0-double-r-renovations-website/_next/static/chunks/658339b53a431492.css","style"]
+0:{"buildId":"QVIzTdmZIiIJoQ7iAPJr-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"gallery","paramType":null,"paramKey":"gallery","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

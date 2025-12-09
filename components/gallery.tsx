@@ -22,7 +22,7 @@ const images = [
   
 
 const Gallery = () => {
-    const [selectedImg, setSelectedImg] = useState(null);
+    const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
     return (
         <div className="gallery-container">
@@ -41,7 +41,7 @@ const Gallery = () => {
             {selectedImg && (
                 <div className="lightbox" onClick={() => setSelectedImg(null)}>
                     <span className="close-button">&times;</span>
-                    <img src={selectedImg} alt="Enlarged view" className="lightbox-content" />
+                    <Image src={selectedImg} alt="Enlarged view" layout="fill" objectFit="contain" className="lightbox-content" />
                 </div>
             )}
         </div>

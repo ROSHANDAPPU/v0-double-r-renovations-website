@@ -11,7 +11,7 @@ const projects = [
     title: "1 Hotel Copenhagen",
     description: "A meticulous restoration, seamlessly integrating modern amenities while preserving original details.",
     categories: ["HOSPITALITY", "RESTORATION", "2024"],
-    image: "/images/prairie-style-home-restoration-living-room-firepla.jpg",
+    image: "/v0-double-r-renovations-website/images/prairie-style-home-restoration-living-room-firepla.jpg",
     layout: "landscape",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     title: "Galleri Sonja",
     description: "A comprehensive renovation, balancing historic authenticity with contemporary living.",
     categories: ["CULTURE", "RENOVATION", "2024"],
-    image: "/images/elegant-1920s-craftsman-home-interior-woodwork.jpg",
+    image: "/v0-double-r-renovations-website/images/elegant-1920s-craftsman-home-interior-woodwork.jpg",
     layout: "portrait",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     title: "Guest House No. 16",
     description: "A sensitive expansion, honoring the original architecture while providing modern functionality.",
     categories: ["HOSPITALITY", "ADDITION", "2023"],
-    image: "/images/georgian-colonial-home-grand-staircase-restoration.jpg",
+    image: "/v0-double-r-renovations-website/images/georgian-colonial-home-grand-staircase-restoration.jpg",
     layout: "portrait",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "Joinery Stool",
     description: "Design | Furniture | 2025",
     categories: ["DESIGN", "FURNITURE", "2025"],
-    image: "/images/spanish-colonial-home-courtyard-renovation.jpg",
+    image: "/v0-double-r-renovations-website/images/spanish-colonial-home-courtyard-renovation.jpg",
     layout: "portrait",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     title: "Strandgården",
     description: "Architecture | Residential | 2025",
     categories: ["ARCHITECTURE", "RESIDENTIAL", "2025"],
-    image: "/images/victorian-home-interior-elegant-living-room-firepl.jpg",
+    image: "/v0-double-r-renovations-website/images/victorian-home-interior-elegant-living-room-firepl.jpg",
     layout: "portrait",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     title: "Audo House",
     description: "A place where architecture and interior design shape experience.",
     categories: ["ARCHITECTURE", "INTERIOR", "2025"],
-    image: "/images/colonial-home-interior-classic-elegant-entryway-st.jpg",
+    image: "/v0-double-r-renovations-website/images/colonial-home-interior-classic-elegant-entryway-st.jpg",
     layout: "landscape",
   },
 ];

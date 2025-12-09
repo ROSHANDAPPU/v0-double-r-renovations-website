@@ -14,7 +14,7 @@ export function CTA() {
       ref={sectionRef}
       className="py-24 md:py-32 text-center overflow-hidden"
       style={{
-        backgroundImage: "url('/images/elegant-1920s-craftsman-home-interior-with-rich-wo.jpg')",
+        backgroundImage: "url('/v0-double-r-renovations-website/images/elegant-1920s-craftsman-home-interior-with-rich-wo.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
