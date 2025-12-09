@@ -74,7 +74,7 @@ const slides = [
     title: "CRAFTSMAN BUNGALOW",
     description:
       "A charming 1920s Craftsman bungalow exterior restoration that maintains the original character while updating systems and finishes. The result is a home that looks as good as the day it was built.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://www.remodelista.com/wp-content/uploads/2023/11/anne-mcdonald-072423-1.jpeg",
   },
   {
     id: 11,
