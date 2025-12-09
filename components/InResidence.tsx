@@ -16,7 +16,7 @@ const InResidence = () => {
 
       {/* 1. SECTION TITLE */}
       <div className="residence-header">
-        <h2>In Residence</h2>
+        <h2>Services</h2>
       </div>
 
       {/* 2. FLOATING SIDE TEXT (Vertical) */}
