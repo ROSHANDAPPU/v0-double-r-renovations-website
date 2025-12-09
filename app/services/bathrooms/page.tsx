@@ -9,7 +9,7 @@ export default function BathroomsPage() {
   return (
     <>
       {/* Simple Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-[70px] md:h-[80px] bg-black/95 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 h-[70px] md:h-[80px] bg-transparent">
         <div className="h-full px-6 md:px-10 lg:px-12 flex items-center justify-between">
           <Link
             href="/"
