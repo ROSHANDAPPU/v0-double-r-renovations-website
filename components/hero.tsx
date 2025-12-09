@@ -60,7 +60,7 @@ const slides = [
     title: "GEORGIAN STAIRCASE",
     description:
       "A grand Georgian staircase restoration that serves as the centerpiece of this historic home. Meticulously carved woodwork and period-appropriate finishes restore the original grandeur while ensuring structural integrity.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://live.staticflickr.com/8392/8511880589_3b6c20b21d_b.jpg",
   },
   {
     id: 9,
