@@ -38,7 +38,7 @@ const About = () => {
         {/* Right Side: Image */}
         <div className="story-image-container relative">
           <img
-            src="/craftsman-restoring-vintage-wooden-staircase-1920s.jpg"
+            src="https://images.adsttc.com/media/images/64d2/53b3/7647/c401/7a95/f8d8/newsletter/casas-de-piedra-en-espana-20-restauraciones-renovaciones-y-transformaciones-desde-su-interior_19.jpg?1691505592"
             alt="Founder of Double R Renovations"
             className="story-img"
           />
