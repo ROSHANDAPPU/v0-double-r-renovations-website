@@ -4,11 +4,11 @@ import './InResidence.css';
 const InResidence = () => {
   // Placeholder data - replace with your actual project details
   const projects = [
-    { id: 1, title: "Repulse Bay Residence", meta: "Residential | 2024", img: "/images/SERVICES/REPULSE%20BAY%20RESIDENCE.jpg" },
-    { id: 2, title: "Kent Avenue Penthouse", meta: "Residential | 2024", img: "/images/SERVICES/KENT%20AVENUE%20PENTHOUSE.jpg" },
-    { id: 3, title: "Fjord Boat House", meta: "Residential | 2020", img: "/images/SERVICES/FJORD%20BOAT%20HOUSE.jpg" },
-    { id: 4, title: "Archipelago House", meta: "Residential | 2020", img: "/images/SERVICES/ARCHIPELAGO%20HOUSE.jpg" },
-    { id: 5, title: "Pavilion House", meta: "Residential | 2021", img: "/images/SERVICES/PAVILION%20HOUSE.jpg" },
+    { id: 1, title: "Repulse Bay Residence", caption: "REPULSE BAY RESIDENCE", meta: "Residential | 2024", img: "/images/SERVICES/REPULSE%20BAY%20RESIDENCE.jpg" },
+    { id: 2, title: "Kent Avenue Penthouse", caption: "KENT AVENUE PENTHOUSE", meta: "Residential | 2024", img: "/images/SERVICES/KENT%20AVENUE%20PENTHOUSE.jpg" },
+    { id: 3, title: "Fjord Boat House", caption: "FJORD BOAT HOUSE", meta: "Residential | 2020", img: "/images/SERVICES/FJORD%20BOAT%20HOUSE.jpg" },
+    { id: 4, title: "Archipelago House", caption: "ARCHIPELAGO HOUSE", meta: "Residential | 2020", img: "/images/SERVICES/ARCHIPELAGO%20HOUSE.jpg" },
+    { id: 5, title: "Pavilion House", caption: "PAVILION HOUSE", meta: "Residential | 2021", img: "/images/SERVICES/PAVILION%20HOUSE.jpg" },
   ];
 
   return (
@@ -30,6 +30,9 @@ const InResidence = () => {
           <div key={project.id} className="residence-item">
             <div className="image-wrapper">
               <img src={project.img} alt={project.title} />
+            </div>
+            <div className="image-caption">
+              {project.caption}
             </div>
             <div className="item-info">
               <h3>{project.title}</h3>
