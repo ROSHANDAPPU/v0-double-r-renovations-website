@@ -14,11 +14,12 @@ export function ProcessHero() {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/prairie-style-home-restoration-living-room-firepla.jpg"
+          src="https://static01.nyt.com/images/2019/12/22/realestate/20RENOVATIONS-promo1/20RENOVATIONS-slide-6DHV-superJumbo.jpg"
           alt="Process background"
           fill
           className="object-cover"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
