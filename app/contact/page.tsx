@@ -61,7 +61,7 @@ export default function ContactPage() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/georgian-colonial-home-grand-staircase-restoration.jpg"
+            src="https://images.stockcake.com/public/c/5/9/c597e7d5-1732-4176-bd46-4e92445880fa_large/light-beyond-door-stockcake.jpg"
             alt="Contact background"
             className="w-full h-full object-cover"
           />
