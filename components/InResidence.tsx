@@ -4,11 +4,11 @@ import './InResidence.css';
 const InResidence = () => {
   // Placeholder data - replace with your actual project details
   const projects = [
-    { id: 1, title: "Repulse Bay Residence", meta: "Residential | 2024", img: "/images/repulse-bay-residence.jpg" },
-    { id: 2, title: "Kent Avenue Penthouse", meta: "Residential | 2024", img: "/images/kent-avenue-penthouse.jpg" },
-    { id: 3, title: "Fjord Boat House", meta: "Residential | 2020", img: "/images/fjord-boat-house.jpg" },
-    { id: 4, title: "Archipelago House", meta: "Residential | 2020", img: "/images/archipelago-house.jpg" },
-    { id: 5, title: "Pavilion House", meta: "Residential | 2021", img: "/images/pavilion-house.jpg" },
+    { id: 1, title: "Repulse Bay Residence", meta: "Residential | 2024", img: "/images/SERVICES/REPULSE%20BAY%20RESIDENCE.jpg" },
+    { id: 2, title: "Kent Avenue Penthouse", meta: "Residential | 2024", img: "/images/SERVICES/KENT%20AVENUE%20PENTHOUSE.jpg" },
+    { id: 3, title: "Fjord Boat House", meta: "Residential | 2020", img: "/images/SERVICES/FJORD%20BOAT%20HOUSE.jpg" },
+    { id: 4, title: "Archipelago House", meta: "Residential | 2020", img: "/images/SERVICES/ARCHIPELAGO%20HOUSE.jpg" },
+    { id: 5, title: "Pavilion House", meta: "Residential | 2021", img: "/images/SERVICES/PAVILION%20HOUSE.jpg" },
   ];
 
   return (
