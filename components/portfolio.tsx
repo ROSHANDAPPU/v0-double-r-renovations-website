@@ -11,7 +11,7 @@ const projects = [
     title: "Repulse Bay Residence",
     description: "A brief description of the project goes here to match the editorial style...",
     categories: ["RESIDENTIAL", "2024"],
-    image: "/images/repulse-bay-residence.jpg",
+    image: "https://images.adsttc.com/media/images/5d51/58a4/284d/d1bc/4500/0207/medium_jpg/浅水湾PULSA_中国香港__by_Aedas_03.jpg?1565612188",
     layout: "landscape",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     title: "Kent Avenue Penthouse",
     description: "A brief description of the project goes here to match the editorial style...",
     categories: ["RESIDENTIAL", "2024"],
-    image: "/images/kent-avenue-penthouse.jpg",
+    image: "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_72-1.jpg",
     layout: "portrait",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     title: "Fjord Boat House",
     description: "A brief description of the project goes here to match the editorial style...",
     categories: ["RESIDENTIAL", "2020"],
-    image: "/images/fjord-boat-house.jpg",
+    image: "https://leibal.com/wp-content/uploads/2020/11/NORM_ARCHITECTS_FJORD_BOAT_HOUSE_18.jpg",
     layout: "portrait",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "Archipelago House",
     description: "A brief description of the project goes here to match the editorial style...",
     categories: ["RESIDENTIAL", "2020"],
-    image: "/images/archipelago-house.jpg",
+    image: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/3c0ae232537929.56899d7433d6f.jpg",
     layout: "landscape",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     title: "Pavilion House",
     description: "A brief description of the project goes here to match the editorial style...",
     categories: ["RESIDENTIAL", "2021"],
-    image: "/images/pavilion-house.jpg",
+    image: "https://normcph.com/wp-content/uploads/2023/10/NormArchitects_PavilionHouse_PhotoCredit_JonasBjerrePoulsen_LowRes_18.jpg",
     layout: "portrait",
   },
 ];
