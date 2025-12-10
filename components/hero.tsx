@@ -11,7 +11,7 @@ const slides = [
     title: "CRAFTSMAN REVIVAL",
     description:
       "Nestled in the historic heart of Portland, this 1920s Craftsman bungalow has been meticulously restored to honor its original character. Rich woodwork, period-appropriate fixtures, and modern amenities blend seamlessly to create a home that celebrates its heritage while embracing contemporary living.",
-    image: "https://media.houseandgarden.co.uk/photos/68372a036258cde52f342970/master/w_1600%2Cc_limit/04-25-25-HG-Russell262.jpg",
+    image: "https://media.houseandgarden.co.uk/photos/62e012c1260f7ae37edaa794/master/w_1600%2Cc_limit/MFOX8726.jpg",
   },
   {
     id: 2,
