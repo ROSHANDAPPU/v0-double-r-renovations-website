@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Column 2: Navigation */}
           <div>
-            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-white mb-5">Navigation</h4>
+            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-heritage-deep-green mb-5">Navigation</h4>
             <ul className="space-y-3">
               {navigationLinks.map((link) => (
                 <li key={link.href}>
@@ -55,7 +55,7 @@ export function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-white mb-5">Services</h4>
+            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-heritage-deep-green mb-5">Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Column 4: Contact */}
           <div>
-            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-white mb-5">Contact</h4>
+            <h4 className="font-sans text-sm font-medium uppercase tracking-[0.1em] text-heritage-deep-green mb-5">Contact</h4>
             <address className="not-italic space-y-3 font-sans text-[15px] text-white">
               <p>123 Heritage Lane</p>
               <p>Dallas, Texas 75205</p>
