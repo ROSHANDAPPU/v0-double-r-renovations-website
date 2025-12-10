@@ -1,188 +1,151 @@
-"use client"
-
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useIntersectionObserver from './useIntersectionObserver';
-import './GeneralConstruction.css';
+import React, { useEffect, useRef } from 'react';
+import './InteriorPainting.css';
 
 const InteriorPainting = () => {
-  const block1Ref = useRef<HTMLDivElement>(null);
-  const block2Ref = useRef<HTMLDivElement>(null);
-  const block3Ref = useRef<HTMLDivElement>(null);
-  const block4Ref = useRef<HTMLDivElement>(null);
-  const block5Ref = useRef<HTMLDivElement>(null);
-  const block6Ref = useRef<HTMLDivElement>(null);
-  const block7Ref = useRef<HTMLDivElement>(null);
+  const revealRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const isVisible1 = useIntersectionObserver(block1Ref);
-  const isVisible2 = useIntersectionObserver(block2Ref);
-  const isVisible3 = useIntersectionObserver(block3Ref);
-  const isVisible4 = useIntersectionObserver(block4Ref);
-  const isVisible5 = useIntersectionObserver(block5Ref);
-  const isVisible6 = useIntersectionObserver(block6Ref);
-  const isVisible7 = useIntersectionObserver(block7Ref);
+  // Animation observer for fade-in elements
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    revealRefs.current.forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+
+  const addToRefs = (el: HTMLDivElement | null) => {
+    if (el && !revealRefs.current.includes(el)) revealRefs.current.push(el);
+  };
 
   return (
-    <div className="service-page-container">
-      {/* LEFT SIDEBAR */}
-      <div className="service-sidebar">
-        <span className="brand-label">Double R Renovations</span>
-        <h1 className="service-title">INTERIOR PAINTING & FINISHES</h1>
-        <p className="service-subtitle">Transform your interiors with expert painting and finishing services that bring out the beauty of your home.</p>
+    <div className="intp-page-container">
 
-        <div className="metrics-grid">
-          <div className="metric-item">
-            <span className="metric-label">EST. PRICE</span>
-            <span className="metric-value">$15k+</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">LEAD TIME</span>
-            <span className="metric-value">2-4 Weeks</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">WORK ON SITE</span>
-            <span className="metric-value">1-2 Weeks</span>
-          </div>
-        </div>
+      {/* =====================================================
+          SECTION 1: THE SPLIT SCROLL (Story + Main Images)
+         ===================================================== */}
+      <section className="intp-split-section">
 
-        <button className="primary-btn">GET PAINTING QUOTE</button>
-        <p className="cta-note">Get a custom quote for your project</p>
-      </div>
+        {/* LEFT: STICKY SIDEBAR (The Story) */}
+        <aside className="intp-sticky-sidebar">
+          <div className="sidebar-content">
+            <div className="sidebar-header">
+              <span className="brand-label">Service 05</span>
+              <h1 className="service-title">Interior Painting<br />& Finishes</h1>
+            </div>
 
-      {/* RIGHT FEED */}
-      <div className="service-feed">
-        {/* First Image Block */}
-        <div className={`feed-block ${isVisible1 ? 'visible' : ''}`} ref={block1Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/farmhouse-interior-rustic-beams-white-walls-modern.jpg"
-              alt="Farmhouse Interior"
-              width={800}
-              height={600}
-              priority
-            />
-            <div className="caption">FARMHOUSE INTERIOR</div>
-          </div>
-        </div>
+            <div className="metrics-grid">
+              <div className="metric">
+                <span className="label">Est. Price</span>
+                <span className="value">$15k+</span>
+              </div>
+              <div className="metric">
+                <span className="label">Lead Time</span>
+                <span className="value">4-8 Weeks</span>
+              </div>
+            </div>
 
-        {/* Key Features */}
-        <div className={`feed-block ${isVisible2 ? 'visible' : ''}`} ref={block2Ref}>
-          <div className="section-header">Key Features</div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <span className="feature-number">01</span>
-              <h3>Color Consultation</h3>
-              <p>Professional color selection and consultation to create harmonious interior palettes.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">02</span>
-              <h3>Premium Materials</h3>
-              <p>High-quality paints, stains, and finishes chosen for durability and aesthetic appeal.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">03</span>
-              <h3>Surface Preparation</h3>
-              <p>Expert surface preparation ensuring smooth, long-lasting finishes.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">04</span>
-              <h3>Detail Work</h3>
-              <p>Precise attention to trim, moldings, and architectural details.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">05</span>
-              <h3>Historic Finishes</h3>
-              <p>Period-appropriate paints and techniques respecting historic homes.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">06</span>
-              <h3>Eco-Friendly Options</h3>
-              <p>Low-VOC and environmentally friendly paint options for healthier living spaces.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Image Block */}
-        <div className={`feed-block ${isVisible3 ? 'visible' : ''}`} ref={block3Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg"
-              alt="Arts and Crafts Cottage"
-              width={800}
-              height={600}
-            />
-            <div className="caption">ARTS AND CRAFTS COTTAGE</div>
-          </div>
-        </div>
-
-        {/* Pricing and Warranties */}
-        <div className={`feed-block ${isVisible4 ? 'visible' : ''}`} ref={block4Ref}>
-          <div className="section-header">Pricing</div>
-          <div className="split-text-block">
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Interior painting costs vary based on room size, surface condition, and materials. We provide detailed estimates customized to your specific painting needs.
+            <div className="service-narrative">
+              <p>
+                A refined interior update with color choices, finish textures, and detail work. This service highlights the character of each room using cohesive tones and high quality materials.
+              </p>
+              <p>
+                We provide expert painting services that transform spaces with precision application and durable, eco-friendly finishes.
               </p>
             </div>
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Interior painting services include comprehensive warranties on workmanship and materials. Paint finishes carry a 3-year warranty against fading, cracking, and peeling.
-              </p>
-              <p className="editorial-text">
-                All painting and finishing work is guaranteed for 2 years, ensuring your interiors maintain their beauty and quality over time.
-              </p>
+
+            <div className="sidebar-cta">
+              <button className="primary-btn">Request a Quote</button>
             </div>
           </div>
-        </div>
+        </aside>
 
-        {/* Third Image Block */}
-        <div className={`feed-block ${isVisible5 ? 'visible' : ''}`} ref={block5Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/colonial-home-interior-classic-elegant-entryway-st.jpg"
-              alt="Colonial Home Interior"
-              width={800}
-              height={600}
-            />
-            <div className="caption">COLONIAL HOME INTERIOR</div>
+        {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
+        <main className="intp-feed">
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/painting-1.jpg" alt="Painted Interior" />
+            <span className="caption">01 / Color Harmony</span>
           </div>
-        </div>
 
-        {/* FAQs */}
-        <div className={`feed-block ${isVisible6 ? 'visible' : ''}`} ref={block6Ref}>
-          <div className="section-header">Frequently Asked Questions</div>
-          <div className="faq-item">
-            <h3>How long does interior painting take?</h3>
-            <p>Most interior painting projects take 1-2 weeks depending on room size and complexity.</p>
-          </div>
-          <div className="faq-item">
-            <h3>Do you work with historic homes?</h3>
-            <p>Yes, we specialize in historic-appropriate paints and techniques that preserve architectural integrity.</p>
-          </div>
-          <div className="faq-item">
-            <h3>What paints do you use?</h3>
-            <p>We use premium Benjamin Moore, Sherwin Williams, and period-appropriate paints for optimal results.</p>
-          </div>
-        </div>
-
-        {/* Final CTA Overlay */}
-        <div className={`feed-block ${isVisible7 ? 'visible' : ''}`} ref={block7Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/pavilion-house.jpg"
-              alt="Pavilion House"
-              width={800}
-              height={600}
-              className="dimmed-img"
-            />
-            <div className="final-cta-overlay">
-              <h2>Transform Your Interiors</h2>
-              <p>Let us bring new life to your home with expert painting and finishing services.</p>
-              <button className="primary-btn">Start Your Project</button>
+          <div className="text-block" ref={addToRefs}>
+            <h2 className="section-header">Finishing Touches</h2>
+            <div className="features-list">
+              <div className="feature">01. Premium Paints</div>
+              <div className="feature">02. Texture Finishes</div>
+              <div className="feature">03. Trim & Molding</div>
             </div>
           </div>
+
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/painting-2.jpg" alt="Detail Work" />
+            <span className="caption">02 / Artisan Details</span>
+          </div>
+        </main>
+      </section>
+
+
+      {/* =====================================================
+          SECTION 2: THE "DESIGN DETAILS" GRID (The Bottom Part)
+          Matches Screenshot 2 & 3 behavior
+         ===================================================== */}
+      <section className="intp-product-grid-section">
+
+        <h2 className="grid-section-title">Design Details</h2>
+
+        <div className="product-split-layout">
+
+          {/* LEFT COLUMN: Featured Item (Sticky or Static) */}
+          <div className="product-col-left">
+            <div className="product-card featured">
+              <div className="prod-img-box">
+                <img src="/images/premium-paint.jpg" alt="Premium Paint" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">FINISHES</span>
+                <span className="prod-cat">PAINT</span>
+                <h3 className="prod-name">Farrow & Ball Estate</h3>
+                <span className="prod-price">$80 / gallon</span>
+                <a href="#" className="visit-link">VISIT WEBSITE</a>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: The Feed of Other Items */}
+          <div className="product-col-right">
+
+            {/* Item 1 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/texture-tool.jpg" alt="Texture Tool" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">TOOLS</span>
+                <span className="prod-cat">FINISHING</span>
+                <h3 className="prod-name">Venetian Plaster Kit</h3>
+                <span className="prod-price">$150 / set</span>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/wood-stain.jpg" alt="Wood Stain" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">WOODWORK</span>
+                <span className="prod-cat">STAINS</span>
+                <h3 className="prod-name">Natural Oak Stain</h3>
+                <span className="prod-price">$45 / quart</span>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+
+      </section>
+
     </div>
   );
 };

@@ -10,31 +10,31 @@ const services = [
     slug: "general-construction",
     name: "General Construction & Framing",
     description: "Reliable structural work that forms the backbone of any home improvement project. This service covers essential framing, load bearing support, and solid foundational construction designed for long lasting performance.",
-    image: "/craftsman-restoring-vintage-wooden-staircase-1920s.jpg",
+    image: "https://media.aedas.com/styles/mcrop/s3/Pulsa1_Hero.jpg?uUfv_tiM6AqckEmkps4R1NE7LobSI4P1",
   },
   {
     slug: "full-home-remodels",
     name: "Full-Home Remodels",
     description: "A complete transformation of interior spaces with thoughtful design choices, functional improvements, and modern aesthetics, tailored to bring a renewed identity to your home.",
-    image: "/elegant-1920s-craftsman-home-interior-woodwork.jpg",
+    image: "https://onekindesign.com/wp-content/uploads/2024/01/Tudor-Style-House-Renovation-Pennsylvania-Peter-Zimmerman-Architects-07-1-Kindesign.jpg",
   },
   {
     slug: "kitchens",
     name: "Kitchens",
     description: "Custom kitchen upgrades that blend utility and refined style. From layout reconfiguration to cabinetry and lighting, this service enhances the heart of the home.",
-    image: "/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg",
+    image: "https://media.vrbo.com/lodging/84000000/83450000/83448800/83448744/af8549cc.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   },
   {
     slug: "bathrooms",
     name: "Bathrooms",
     description: "Upgraded bathrooms with improved comfort, durability, and visual appeal. This includes tile work, fixtures, storage optimization, and design touches suited to your space.",
-    image: "/tudor-revival-home-renovation-elegant-interior.jpg",
+    image: "https://www.sunset.com/wp-content/uploads/tudor-exterior-arterberry-cooke-pc-gavin-cater.jpg",
   },
   {
     slug: "interior-painting",
     name: "Interior Painting & Finishes",
     description: "A refined interior update with color choices, finish textures, and detail work. This service highlights the character of each room using cohesive tones and high quality materials.",
-    image: "/farmhouse-interior-rustic-beams-white-walls-modern.jpg",
+    image: "https://cdn.vox-cdn.com/thumbor/AfNC-ZaVF2mtc1zsFCH8lffsZ-c=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19565702/4570_University_Ave____Pierre_Galant_1.jpg",
   },
 ];
 
@@ -76,6 +76,7 @@ export function ServicesMenu() {
                   alt={service.name}
                   fill
                   className="object-cover"
+                  unoptimized
                 />
                 <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 p-4 rounded">
                     <p>{service.description}</p>

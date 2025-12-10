@@ -116,7 +116,7 @@ const slides = [
     title: "COLONIAL ENTRYWAY",
     description:
       "A classic Colonial home interior with an elegant entryway. The restoration work maintains the traditional proportions and details while incorporating modern conveniences and updated systems.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://s.hdnux.com/photos/25/20/76/5574572/4/1920x0.jpg",
   },
   {
     id: 17,

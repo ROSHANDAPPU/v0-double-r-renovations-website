@@ -6,7 +6,7 @@
   --border-line: #222;
 }
 
-.gc-page-container {
+.kit-page-container {
   background-color: var(--bg-black);
   color: var(--text-white);
   font-family: 'Times New Roman', serif;
@@ -15,14 +15,14 @@
 /* =========================================
    SECTION 1: SPLIT SCROLL (Top)
    ========================================= */
-.gc-split-section {
+.kit-split-section {
   display: flex;
   position: relative;
   border-bottom: 1px solid var(--border-line); /* Separator line */
 }
 
 /* LEFT SIDEBAR (Sticky) */
-.gc-sticky-sidebar {
+.kit-sticky-sidebar {
   width: 40%;
   height: 100vh;
   position: sticky;
@@ -66,7 +66,7 @@
 }
 
 /* RIGHT FEED */
-.gc-feed {
+.kit-feed {
   width: 60%;
   padding: 100px 80px;
 }
@@ -98,12 +98,11 @@
   color: #444;
 }
 
-
 /* =========================================
    SECTION 2: PRODUCT GRID (Bottom)
    Matches Screenshot 2 & 3
    ========================================= */
-.gc-product-grid-section {
+.kit-product-grid-section {
   padding: 80px 60px;
 }
 
@@ -205,10 +204,10 @@
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .gc-split-section, .product-split-layout {
+  .kit-split-section, .product-split-layout {
     flex-direction: column;
   }
-  .gc-sticky-sidebar, .product-col-left, .product-col-right, .gc-feed {
+  .kit-sticky-sidebar, .product-col-left, .product-col-right, .kit-feed {
     width: 100%;
     height: auto;
     position: relative;

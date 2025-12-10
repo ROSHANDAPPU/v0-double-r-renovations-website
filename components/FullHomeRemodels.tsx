@@ -1,188 +1,151 @@
-"use client"
-
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useIntersectionObserver from './useIntersectionObserver';
-import './GeneralConstruction.css';
+import React, { useEffect, useRef } from 'react';
+import './FullHomeRemodels.css';
 
 const FullHomeRemodels = () => {
-  const block1Ref = useRef<HTMLDivElement>(null);
-  const block2Ref = useRef<HTMLDivElement>(null);
-  const block3Ref = useRef<HTMLDivElement>(null);
-  const block4Ref = useRef<HTMLDivElement>(null);
-  const block5Ref = useRef<HTMLDivElement>(null);
-  const block6Ref = useRef<HTMLDivElement>(null);
-  const block7Ref = useRef<HTMLDivElement>(null);
+  const revealRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const isVisible1 = useIntersectionObserver(block1Ref);
-  const isVisible2 = useIntersectionObserver(block2Ref);
-  const isVisible3 = useIntersectionObserver(block3Ref);
-  const isVisible4 = useIntersectionObserver(block4Ref);
-  const isVisible5 = useIntersectionObserver(block5Ref);
-  const isVisible6 = useIntersectionObserver(block6Ref);
-  const isVisible7 = useIntersectionObserver(block7Ref);
+  // Animation observer for fade-in elements
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    revealRefs.current.forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+
+  const addToRefs = (el: HTMLDivElement | null) => {
+    if (el && !revealRefs.current.includes(el)) revealRefs.current.push(el);
+  };
 
   return (
-    <div className="service-page-container">
-      {/* LEFT SIDEBAR */}
-      <div className="service-sidebar">
-        <span className="brand-label">Double R Renovations</span>
-        <h1 className="service-title">FULL-HOME REMODELS</h1>
-        <p className="service-subtitle">Complete home transformations that preserve character while embracing modern living.</p>
+    <div className="fhr-page-container">
 
-        <div className="metrics-grid">
-          <div className="metric-item">
-            <span className="metric-label">EST. PRICE</span>
-            <span className="metric-value">$150k+</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">LEAD TIME</span>
-            <span className="metric-value">8-16 Weeks</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">WORK ON SITE</span>
-            <span className="metric-value">6-12 Weeks</span>
-          </div>
-        </div>
+      {/* =====================================================
+          SECTION 1: THE SPLIT SCROLL (Story + Main Images)
+         ===================================================== */}
+      <section className="fhr-split-section">
 
-        <button className="primary-btn">REQUEST A CONSULTATION</button>
-        <p className="cta-note">Get a custom quote for your project</p>
-      </div>
+        {/* LEFT: STICKY SIDEBAR (The Story) */}
+        <aside className="fhr-sticky-sidebar">
+          <div className="sidebar-content">
+            <div className="sidebar-header">
+              <span className="brand-label">Service 02</span>
+              <h1 className="service-title">Full-Home<br />Remodels</h1>
+            </div>
 
-      {/* RIGHT FEED */}
-      <div className="service-feed">
-        {/* First Image Block */}
-        <div className={`feed-block ${isVisible1 ? 'visible' : ''}`} ref={block1Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/elegant-1920s-craftsman-home-interior-woodwork.jpg"
-              alt="Elegant Craftsman Interior"
-              width={800}
-              height={600}
-              priority
-            />
-            <div className="caption">ELEGANT CRAFTSMAN INTERIOR</div>
-          </div>
-        </div>
+            <div className="metrics-grid">
+              <div className="metric">
+                <span className="label">Est. Price</span>
+                <span className="value">$150k+</span>
+              </div>
+              <div className="metric">
+                <span className="label">Lead Time</span>
+                <span className="value">12-24 Weeks</span>
+              </div>
+            </div>
 
-        {/* Key Features */}
-        <div className={`feed-block ${isVisible2 ? 'visible' : ''}`} ref={block2Ref}>
-          <div className="section-header">Key Features</div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <span className="feature-number">01</span>
-              <h3>Complete Renovation</h3>
-              <p>End-to-end home remodeling from concept to completion, covering all rooms and systems.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">02</span>
-              <h3>Design Integration</h3>
-              <p>Unified design approach ensuring cohesive aesthetics throughout the entire home.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">03</span>
-              <h3>Modern Amenities</h3>
-              <p>Integration of contemporary features while maintaining historic character.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">04</span>
-              <h3>System Upgrades</h3>
-              <p>Electrical, plumbing, and HVAC improvements for modern comfort and efficiency.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">05</span>
-              <h3>Structural Enhancements</h3>
-              <p>Foundation and framing improvements for long-term stability and safety.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">06</span>
-              <h3>Custom Finishes</h3>
-              <p>Premium materials and finishes tailored to your style and budget.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Image Block */}
-        <div className={`feed-block ${isVisible3 ? 'visible' : ''}`} ref={block3Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/prairie-style-home-restoration-living-room-firepla.jpg"
-              alt="Prairie Style Home Restoration"
-              width={800}
-              height={600}
-            />
-            <div className="caption">PRAIRIE STYLE HOME RESTORATION</div>
-          </div>
-        </div>
-
-        {/* Pricing and Warranties */}
-        <div className={`feed-block ${isVisible4 ? 'visible' : ''}`} ref={block4Ref}>
-          <div className="section-header">Pricing</div>
-          <div className="split-text-block">
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Full-home remodel pricing depends on scope, materials, and home size. Each project is uniquely priced based on your specific renovation goals.
+            <div className="service-narrative">
+              <p>
+                A complete transformation of interior spaces with thoughtful design choices, functional improvements, and modern aesthetics, tailored to bring a renewed identity to your home.
+              </p>
+              <p>
+                Our full-home remodels integrate high-end finishes, custom layouts, and sustainable materials to create spaces that reflect your lifestyle and vision.
               </p>
             </div>
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Full-home remodels include comprehensive warranties covering all workmanship and materials. Structural improvements carry a 10-year warranty for your peace of mind.
-              </p>
-              <p className="editorial-text">
-                All finishes, installations, and systems are guaranteed for 2-5 years depending on the component, ensuring your renovated home maintains its quality and value.
-              </p>
+
+            <div className="sidebar-cta">
+              <button className="primary-btn">Request a Quote</button>
             </div>
           </div>
-        </div>
+        </aside>
 
-        {/* Third Image Block */}
-        <div className={`feed-block ${isVisible5 ? 'visible' : ''}`} ref={block5Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/georgian-colonial-home-grand-staircase-restoration.jpg"
-              alt="Georgian Colonial Home Staircase"
-              width={800}
-              height={600}
-            />
-            <div className="caption">GEORGIAN COLONIAL GRAND STAIRCASE</div>
+        {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
+        <main className="fhr-feed">
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/remodel-1.jpg" alt="Living Room" />
+            <span className="caption">01 / Living Spaces</span>
           </div>
-        </div>
 
-        {/* FAQs */}
-        <div className={`feed-block ${isVisible6 ? 'visible' : ''}`} ref={block6Ref}>
-          <div className="section-header">Frequently Asked Questions</div>
-          <div className="faq-item">
-            <h3>Can I live during the remodel?</h3>
-            <p>Yes, we work efficiently to minimize disruption. Temporary living arrangements can be arranged if needed.</p>
-          </div>
-          <div className="faq-item">
-            <h3>How do you handle historic homes?</h3>
-            <p>We specialize in preserving historic character while adding modern functionality and comfort.</p>
-          </div>
-          <div className="faq-item">
-            <h3>What's included in a full remodel?</h3>
-            <p>Complete renovation covering kitchens, bathrooms, living spaces, systems, and exterior improvements.</p>
-          </div>
-        </div>
-
-        {/* Final CTA Overlay */}
-        <div className={`feed-block ${isVisible7 ? 'visible' : ''}`} ref={block7Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/victorian-home-interior-elegant-living-room-firepl.jpg"
-              alt="Victorian Home Interior"
-              width={800}
-              height={600}
-              className="dimmed-img"
-            />
-            <div className="final-cta-overlay">
-              <h2>Ready for a Complete Home Transformation?</h2>
-              <p>Let's discuss your vision for a fully renovated home that meets all your needs.</p>
-              <button className="primary-btn">Start Your Remodel</button>
+          <div className="text-block" ref={addToRefs}>
+            <h2 className="section-header">Key Areas</h2>
+            <div className="features-list">
+              <div className="feature">01. Kitchen & Dining</div>
+              <div className="feature">02. Living Areas</div>
+              <div className="feature">03. Bedrooms & Bathrooms</div>
             </div>
           </div>
+
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/remodel-2.jpg" alt="Kitchen" />
+            <span className="caption">02 / Modern Kitchen</span>
+          </div>
+        </main>
+      </section>
+
+
+      {/* =====================================================
+          SECTION 2: THE "DESIGN DETAILS" GRID (The Bottom Part)
+          Matches Screenshot 2 & 3 behavior
+         ===================================================== */}
+      <section className="fhr-product-grid-section">
+
+        <h2 className="grid-section-title">Design Details</h2>
+
+        <div className="product-split-layout">
+
+          {/* LEFT COLUMN: Featured Item (Sticky or Static) */}
+          <div className="product-col-left">
+            <div className="product-card featured">
+              <div className="prod-img-box">
+                <img src="/images/flooring-sample.jpg" alt="Hardwood Flooring" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">PREMIUM FINISHES</span>
+                <span className="prod-cat">FLOORING</span>
+                <h3 className="prod-name">Oak Hardwood</h3>
+                <span className="prod-price">$15 / sq ft</span>
+                <a href="#" className="visit-link">VISIT WEBSITE</a>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: The Feed of Other Items */}
+          <div className="product-col-right">
+
+            {/* Item 1 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/cabinetry.jpg" alt="Cabinetry" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">CUSTOM</span>
+                <span className="prod-cat">CABINETRY</span>
+                <h3 className="prod-name">Bespoke Kitchen Cabinets</h3>
+                <span className="prod-price">$5,000+</span>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/lighting.jpg" alt="Lighting" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">AMBIANCE</span>
+                <span className="prod-cat">LIGHTING</span>
+                <h3 className="prod-name">LED Pendant Lights</h3>
+                <span className="prod-price">$300 / unit</span>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+
+      </section>
+
     </div>
   );
 };

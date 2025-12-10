@@ -1,188 +1,151 @@
-"use client"
-
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useIntersectionObserver from './useIntersectionObserver';
-import './GeneralConstruction.css';
+import React, { useEffect, useRef } from 'react';
+import './Bathrooms.css';
 
 const Bathrooms = () => {
-  const block1Ref = useRef<HTMLDivElement>(null);
-  const block2Ref = useRef<HTMLDivElement>(null);
-  const block3Ref = useRef<HTMLDivElement>(null);
-  const block4Ref = useRef<HTMLDivElement>(null);
-  const block5Ref = useRef<HTMLDivElement>(null);
-  const block6Ref = useRef<HTMLDivElement>(null);
-  const block7Ref = useRef<HTMLDivElement>(null);
+  const revealRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const isVisible1 = useIntersectionObserver(block1Ref);
-  const isVisible2 = useIntersectionObserver(block2Ref);
-  const isVisible3 = useIntersectionObserver(block3Ref);
-  const isVisible4 = useIntersectionObserver(block4Ref);
-  const isVisible5 = useIntersectionObserver(block5Ref);
-  const isVisible6 = useIntersectionObserver(block6Ref);
-  const isVisible7 = useIntersectionObserver(block7Ref);
+  // Animation observer for fade-in elements
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    revealRefs.current.forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+
+  const addToRefs = (el: HTMLDivElement | null) => {
+    if (el && !revealRefs.current.includes(el)) revealRefs.current.push(el);
+  };
 
   return (
-    <div className="service-page-container">
-      {/* LEFT SIDEBAR */}
-      <div className="service-sidebar">
-        <span className="brand-label">Double R Renovations</span>
-        <h1 className="service-title">BATHROOM RENOVATIONS</h1>
-        <p className="service-subtitle">Create serene, functional bathrooms that blend luxury, comfort, and period-appropriate design.</p>
+    <div className="bath-page-container">
 
-        <div className="metrics-grid">
-          <div className="metric-item">
-            <span className="metric-label">EST. PRICE</span>
-            <span className="metric-value">$25k+</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">LEAD TIME</span>
-            <span className="metric-value">3-6 Weeks</span>
-          </div>
-          <div className="metric-item">
-            <span className="metric-label">WORK ON SITE</span>
-            <span className="metric-value">1-3 Weeks</span>
-          </div>
-        </div>
+      {/* =====================================================
+          SECTION 1: THE SPLIT SCROLL (Story + Main Images)
+         ===================================================== */}
+      <section className="bath-split-section">
 
-        <button className="primary-btn">GET BATHROOM PRICING</button>
-        <p className="cta-note">Get a custom quote for your project</p>
-      </div>
+        {/* LEFT: STICKY SIDEBAR (The Story) */}
+        <aside className="bath-sticky-sidebar">
+          <div className="sidebar-content">
+            <div className="sidebar-header">
+              <span className="brand-label">Service 04</span>
+              <h1 className="service-title">Bathrooms</h1>
+            </div>
 
-      {/* RIGHT FEED */}
-      <div className="service-feed">
-        {/* First Image Block */}
-        <div className={`feed-block ${isVisible1 ? 'visible' : ''}`} ref={block1Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/tudor-revival-home-renovation-elegant-interior.jpg"
-              alt="Tudor Revival Home Interior"
-              width={800}
-              height={600}
-              priority
-            />
-            <div className="caption">TUDOR REVIVAL HOME INTERIOR</div>
-          </div>
-        </div>
+            <div className="metrics-grid">
+              <div className="metric">
+                <span className="label">Est. Price</span>
+                <span className="value">$40k+</span>
+              </div>
+              <div className="metric">
+                <span className="label">Lead Time</span>
+                <span className="value">10-16 Weeks</span>
+              </div>
+            </div>
 
-        {/* Key Features */}
-        <div className={`feed-block ${isVisible2 ? 'visible' : ''}`} ref={block2Ref}>
-          <div className="section-header">Key Features</div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <span className="feature-number">01</span>
-              <h3>Luxury Fixtures</h3>
-              <p>Premium faucets, hardware, and fixtures chosen for quality and style.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">02</span>
-              <h3>Tile & Stone Work</h3>
-              <p>Expert installation of natural stone, ceramic, or premium synthetic surfaces.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">03</span>
-              <h3>Vanity Design</h3>
-              <p>Custom vanities with integrated sinks and thoughtful storage solutions.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">04</span>
-              <h3>Shower Solutions</h3>
-              <p>Walk-in showers, tub replacements, or custom shower enclosures.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">05</span>
-              <h3>Lighting & Mirrors</h3>
-              <p>Ambient and task lighting with beautifully framed mirrors.</p>
-            </div>
-            <div className="feature-card">
-              <span className="feature-number">06</span>
-              <h3>Accessibility Features</h3>
-              <p>Universal design elements for comfort and safety at any age.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Image Block */}
-        <div className={`feed-block ${isVisible3 ? 'visible' : ''}`} ref={block3Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/farmhouse-interior-rustic-beams-white-walls-modern.jpg"
-              alt="Farmhouse Interior"
-              width={800}
-              height={600}
-            />
-            <div className="caption">FARMHOUSE INTERIOR</div>
-          </div>
-        </div>
-
-        {/* Pricing and Warranties */}
-        <div className={`feed-block ${isVisible4 ? 'visible' : ''}`} ref={block4Ref}>
-          <div className="section-header">Pricing</div>
-          <div className="split-text-block">
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Bathroom renovation costs depend on scope, fixtures, and materials. We provide transparent pricing with no hidden fees.
+            <div className="service-narrative">
+              <p>
+                Upgraded bathrooms with improved comfort, durability, and visual appeal. This includes tile work, fixtures, storage optimization, and design touches suited to your space.
+              </p>
+              <p>
+                We specialize in creating luxurious, functional bathrooms that blend modern amenities with timeless elegance.
               </p>
             </div>
-            <div className="editorial-col">
-              <p className="editorial-text">
-                Bathroom renovations include comprehensive warranties on all installations and materials. Plumbing work carries a 5-year warranty for leak-free performance.
-              </p>
-              <p className="editorial-text">
-                Fixtures, tile work, and finishes are guaranteed for 2 years, ensuring your bathroom maintains its beauty and functionality.
-              </p>
+
+            <div className="sidebar-cta">
+              <button className="primary-btn">Request a Quote</button>
             </div>
           </div>
-        </div>
+        </aside>
 
-        {/* Third Image Block */}
-        <div className={`feed-block ${isVisible5 ? 'visible' : ''}`} ref={block5Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/elegant-craftsman-home-interior-with-wood-details-.jpg"
-              alt="Elegant Craftsman Home Interior"
-              width={800}
-              height={600}
-            />
-            <div className="caption">ELEGANT CRAFTSMAN HOME INTERIOR</div>
+        {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
+        <main className="bath-feed">
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/bathroom-1.jpg" alt="Luxury Bathroom" />
+            <span className="caption">01 / Spa-Like Retreat</span>
           </div>
-        </div>
 
-        {/* FAQs */}
-        <div className={`feed-block ${isVisible6 ? 'visible' : ''}`} ref={block6Ref}>
-          <div className="section-header">Frequently Asked Questions</div>
-          <div className="faq-item">
-            <h3>Can you work around my schedule?</h3>
-            <p>Yes, we schedule work to minimize disruption, often completing projects in phases.</p>
-          </div>
-          <div className="faq-item">
-            <h3>Do you handle plumbing updates?</h3>
-            <p>Absolutely, we provide complete plumbing services including pipe replacement and fixture installation.</p>
-          </div>
-          <div className="faq-item">
-            <h3>What about water damage prevention?</h3>
-            <p>We include waterproofing and proper drainage solutions to prevent future water damage.</p>
-          </div>
-        </div>
-
-        {/* Final CTA Overlay */}
-        <div className={`feed-block ${isVisible7 ? 'visible' : ''}`} ref={block7Ref}>
-          <div className="image-block">
-            <Image
-              src="/images/repulse-bay-residence.jpg"
-              alt="Repulse Bay Residence"
-              width={800}
-              height={600}
-              className="dimmed-img"
-            />
-            <div className="final-cta-overlay">
-              <h2>Transform Your Bathroom Today</h2>
-              <p>Experience the luxury of a beautifully renovated bathroom designed for modern living.</p>
-              <button className="primary-btn">Start Your Renovation</button>
+          <div className="text-block" ref={addToRefs}>
+            <h2 className="section-header">Key Features</h2>
+            <div className="features-list">
+              <div className="feature">01. Custom Vanities</div>
+              <div className="feature">02. Premium Fixtures</div>
+              <div className="feature">03. Tile & Stone Work</div>
             </div>
           </div>
+
+          <div className="image-block" ref={addToRefs}>
+            <img src="/images/bathroom-2.jpg" alt="Vanity Detail" />
+            <span className="caption">02 / Elegant Details</span>
+          </div>
+        </main>
+      </section>
+
+
+      {/* =====================================================
+          SECTION 2: THE "DESIGN DETAILS" GRID (The Bottom Part)
+          Matches Screenshot 2 & 3 behavior
+         ===================================================== */}
+      <section className="bath-product-grid-section">
+
+        <h2 className="grid-section-title">Design Details</h2>
+
+        <div className="product-split-layout">
+
+          {/* LEFT COLUMN: Featured Item (Sticky or Static) */}
+          <div className="product-col-left">
+            <div className="product-card featured">
+              <div className="prod-img-box">
+                <img src="/images/marble-tile.jpg" alt="Marble Tile" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">SURFACES</span>
+                <span className="prod-cat">TILES</span>
+                <h3 className="prod-name">Carrara Marble</h3>
+                <span className="prod-price">$25 / sq ft</span>
+                <a href="#" className="visit-link">VISIT WEBSITE</a>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: The Feed of Other Items */}
+          <div className="product-col-right">
+
+            {/* Item 1 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/shower-fixture.jpg" alt="Shower Fixture" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">FIXTURES</span>
+                <span className="prod-cat">SHOWER</span>
+                <h3 className="prod-name">Rainfall Showerhead</h3>
+                <span className="prod-price">$500+</span>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="product-card">
+              <div className="prod-img-box">
+                <img src="/images/vanity-cabinet.jpg" alt="Vanity Cabinet" />
+              </div>
+              <div className="prod-info">
+                <span className="prod-brand">STORAGE</span>
+                <span className="prod-cat">VANITY</span>
+                <h3 className="prod-name">Custom Oak Vanity</h3>
+                <span className="prod-price">$2,000+</span>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+
+      </section>
+
     </div>
   );
 };
