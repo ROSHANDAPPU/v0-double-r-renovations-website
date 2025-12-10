@@ -65,7 +65,7 @@ const Kitchens = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="kit-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/kitchen-1.jpg" alt="Modern Kitchen" />
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwa2l0Y2hlbnxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Kitchen" />
             <span className="caption">01 / Island Design</span>
           </div>
 
@@ -79,7 +79,7 @@ const Kitchens = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/kitchen-2.jpg" alt="Cabinet Detail" />
+            <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2l0Y2hlbiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Cabinet Detail" />
             <span className="caption">02 / Custom Cabinetry</span>
           </div>
         </main>
@@ -100,7 +100,7 @@ const Kitchens = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="/images/quartz-countertop.jpg" alt="Quartz Countertop" />
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0Y2hlbnxlbnwwfHwwfHx8MA%3D%3D" alt="Quartz Countertop" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">SURFACES</span>
@@ -118,7 +118,7 @@ const Kitchens = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/cabinet-hardware.jpg" alt="Cabinet Hardware" />
+                <img src="https://www.homworks.com/wp-content/uploads/2023/05/11_Straight-Kitchen-HD.jpg" alt="Cabinet Hardware" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">HARDWARE</span>
@@ -131,7 +131,7 @@ const Kitchens = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/backsplash-tile.jpg" alt="Backsplash Tile" />
+                <img src="https://plus.unsplash.com/premium_photo-1661963167025-ca61fd6b36d8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbiUyMGNhYmluZXRzfGVufDB8fDB8fHww" alt="Backsplash Tile" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">TILING</span>
