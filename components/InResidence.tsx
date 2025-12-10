@@ -4,11 +4,11 @@ import './InResidence.css';
 const InResidence = () => {
   // Placeholder data - replace with your actual project details
   const projects = [
-    { id: 1, title: "Repulse Bay Residence", caption: "REPULSE BAY RESIDENCE", meta: "Residential | 2024", img: "/images/SERVICES/REPULSE%20BAY%20RESIDENCE.jpg" },
-    { id: 2, title: "Kent Avenue Penthouse", caption: "KENT AVENUE PENTHOUSE", meta: "Residential | 2024", img: "/images/SERVICES/KENT%20AVENUE%20PENTHOUSE.jpg" },
-    { id: 3, title: "Fjord Boat House", caption: "FJORD BOAT HOUSE", meta: "Residential | 2020", img: "/images/SERVICES/FJORD%20BOAT%20HOUSE.jpg" },
-    { id: 4, title: "Archipelago House", caption: "ARCHIPELAGO HOUSE", meta: "Residential | 2020", img: "/images/SERVICES/ARCHIPELAGO%20HOUSE.jpg" },
-    { id: 5, title: "Pavilion House", caption: "PAVILION HOUSE", meta: "Residential | 2021", img: "/images/SERVICES/PAVILION%20HOUSE.jpg" },
+    { id: 1, title: "Repulse Bay Residence", caption: "REPULSE BAY RESIDENCE", meta: "Residential | 2024", img: "https://images.adsttc.com/media/images/5d51/58a4/284d/d1bc/4500/0207/medium_jpg/浅水湾PULSA_中国香港__by_Aedas_03.jpg?1565612188" },
+    { id: 2, title: "Kent Avenue Penthouse", caption: "KENT AVENUE PENTHOUSE", meta: "Residential | 2024", img: "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_72-1.jpg" },
+    { id: 3, title: "Fjord Boat House", caption: "FJORD BOAT HOUSE", meta: "Residential | 2020", img: "https://leibal.com/wp-content/uploads/2020/11/NORM_ARCHITECTS_FJORD_BOAT_HOUSE_18.jpg" },
+    { id: 4, title: "Archipelago House", caption: "ARCHIPELAGO HOUSE", meta: "Residential | 2020", img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/3c0ae232537929.56899d7433d6f.jpg" },
+    { id: 5, title: "Pavilion House", caption: "PAVILION HOUSE", meta: "Residential | 2021", img: "https://normcph.com/wp-content/uploads/2023/10/NormArchitects_PavilionHouse_PhotoCredit_JonasBjerrePoulsen_LowRes_18.jpg" },
   ];
 
   return (
