@@ -65,7 +65,7 @@ const FullHomeRemodels = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="fhr-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/remodel-1.jpg" alt="Living Room" />
+            <img src="https://www.thespruce.com/thmb/c9ibNdGHBKMb8EkT3pKDqYiDN-I=/5130x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-601799249-5890dfb55f9b5874ee7dcd57.jpg" alt="Living Room" />
             <span className="caption">01 / Living Spaces</span>
           </div>
 
@@ -79,7 +79,7 @@ const FullHomeRemodels = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/remodel-2.jpg" alt="Kitchen" />
+            <img src="https://media.istockphoto.com/id/1470468268/photo/female-electrician-working-in-a-kitchen-remodelling.jpg?s=612x612&w=0&k=20&c=C2tERgTBZbNYdLtIJ0dZhwM_xUSx5B-cva9AMHeJ5Ok=" alt="Kitchen" />
             <span className="caption">02 / Modern Kitchen</span>
           </div>
         </main>
@@ -100,7 +100,7 @@ const FullHomeRemodels = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="/images/flooring-sample.jpg" alt="Hardwood Flooring" />
+                <img src="https://www.bankrate.com/2022/04/29102909/types-of-kitchen-remodels-527604950.jpg?auto=webp&optimize=high&crop=16:9" alt="Hardwood Flooring" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">PREMIUM FINISHES</span>
@@ -118,7 +118,7 @@ const FullHomeRemodels = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/cabinetry.jpg" alt="Cabinetry" />
+                <img src="https://www.turnkeykitchenrenovations.com/wp-content/uploads/2024/03/kitchen-closet-renovation.jpg" alt="Cabinetry" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">CUSTOM</span>
@@ -131,7 +131,7 @@ const FullHomeRemodels = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/lighting.jpg" alt="Lighting" />
+                <img src="https://images.squarespace-cdn.com/content/v1/54a31443e4b0c309d00d739c/1615844292546-P393TNT1JVOM0YUJ369A/IMG_8588.jpg?format=2500w" alt="Lighting" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">AMBIANCE</span>
