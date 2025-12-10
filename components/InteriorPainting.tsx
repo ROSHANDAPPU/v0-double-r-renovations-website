@@ -65,7 +65,7 @@ const InteriorPainting = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="intp-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/painting-1.jpg" alt="Painted Interior" />
+            <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/1920s_interior_style_pqwrx.jpg" alt="Painted Interior" />
             <span className="caption">01 / Color Harmony</span>
           </div>
 
@@ -79,7 +79,7 @@ const InteriorPainting = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="/images/painting-2.jpg" alt="Detail Work" />
+            <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/regional_adaptations_of_art_deco_2vip6.jpg" alt="Detail Work" />
             <span className="caption">02 / Artisan Details</span>
           </div>
         </main>
@@ -100,7 +100,7 @@ const InteriorPainting = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="/images/premium-paint.jpg" alt="Premium Paint" />
+                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/1920s_decor_inspiration_sources_lg14k.jpg" alt="Premium Paint" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">FINISHES</span>
@@ -118,7 +118,7 @@ const InteriorPainting = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/texture-tool.jpg" alt="Texture Tool" />
+                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/luxurious_black_and_gold_elegance_mbksz.jpg" alt="Texture Tool" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">TOOLS</span>
@@ -131,7 +131,7 @@ const InteriorPainting = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="/images/wood-stain.jpg" alt="Wood Stain" />
+                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/decorative_tassel_fringe_beading_jcj3p.jpg" alt="Wood Stain" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">WOODWORK</span>
