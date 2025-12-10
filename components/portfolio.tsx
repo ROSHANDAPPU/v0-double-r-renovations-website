@@ -8,51 +8,43 @@ import './portfolio.css';
 const projects = [
   {
     id: 1,
-    title: "1 Hotel Copenhagen",
-    description: "A meticulous restoration, seamlessly integrating modern amenities while preserving original details.",
-    categories: ["HOSPITALITY", "RESTORATION", "2024"],
-    image: "/v0-double-r-renovations-website/images/prairie-style-home-restoration-living-room-firepla.jpg",
+    title: "Repulse Bay Residence",
+    description: "A brief description of the project goes here to match the editorial style...",
+    categories: ["RESIDENTIAL", "2024"],
+    image: "/images/repulse-bay-residence.jpg",
     layout: "landscape",
   },
   {
     id: 2,
-    title: "Galleri Sonja",
-    description: "A comprehensive renovation, balancing historic authenticity with contemporary living.",
-    categories: ["CULTURE", "RENOVATION", "2024"],
-    image: "/v0-double-r-renovations-website/images/elegant-1920s-craftsman-home-interior-woodwork.jpg",
+    title: "Kent Avenue Penthouse",
+    description: "A brief description of the project goes here to match the editorial style...",
+    categories: ["RESIDENTIAL", "2024"],
+    image: "/images/kent-avenue-penthouse.jpg",
+    layout: "portrait",
+  },
+  {
+    id: 3,
+    title: "Fjord Boat House",
+    description: "A brief description of the project goes here to match the editorial style...",
+    categories: ["RESIDENTIAL", "2020"],
+    image: "/images/fjord-boat-house.jpg",
     layout: "portrait",
   },
   {
     id: 4,
-    title: "Guest House No. 16",
-    description: "A sensitive expansion, honoring the original architecture while providing modern functionality.",
-    categories: ["HOSPITALITY", "ADDITION", "2023"],
-    image: "/v0-double-r-renovations-website/images/georgian-colonial-home-grand-staircase-restoration.jpg",
-    layout: "portrait",
+    title: "Archipelago House",
+    description: "A brief description of the project goes here to match the editorial style...",
+    categories: ["RESIDENTIAL", "2020"],
+    image: "/images/archipelago-house.jpg",
+    layout: "landscape",
   },
   {
     id: 5,
-    title: "Joinery Stool",
-    description: "Design | Furniture | 2025",
-    categories: ["DESIGN", "FURNITURE", "2025"],
-    image: "/v0-double-r-renovations-website/images/spanish-colonial-home-courtyard-renovation.jpg",
+    title: "Pavilion House",
+    description: "A brief description of the project goes here to match the editorial style...",
+    categories: ["RESIDENTIAL", "2021"],
+    image: "/images/pavilion-house.jpg",
     layout: "portrait",
-  },
-  {
-    id: 6,
-    title: "Strandgården",
-    description: "Architecture | Residential | 2025",
-    categories: ["ARCHITECTURE", "RESIDENTIAL", "2025"],
-    image: "/v0-double-r-renovations-website/images/victorian-home-interior-elegant-living-room-firepl.jpg",
-    layout: "portrait",
-  },
-  {
-    id: 7,
-    title: "Audo House",
-    description: "A place where architecture and interior design shape experience.",
-    categories: ["ARCHITECTURE", "INTERIOR", "2025"],
-    image: "/v0-double-r-renovations-website/images/colonial-home-interior-classic-elegant-entryway-st.jpg",
-    layout: "landscape",
   },
 ];
 
@@ -91,7 +83,7 @@ export function Portfolio({ sectionRef: externalRef, isVisible: externalIsVisibl
             {projects.slice(0, 3).map((project, index) => (
               <article
                 key={project.id}
-                className={`work-item ${project.title === "1 Hotel Copenhagen" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
+                className={`work-item ${project.layout === "landscape" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -122,10 +114,10 @@ export function Portfolio({ sectionRef: externalRef, isVisible: externalIsVisibl
           </div>
 
           <div className="gallery-row" style={{ marginTop: '80px' }}>
-            {projects.slice(3, 6).map((project, index) => (
+            {projects.slice(3).map((project, index) => (
               <article
                 key={project.id}
-                className={`work-item ${project.title === "Audo House" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
+                className={`work-item ${project.layout === "landscape" ? "item-landscape" : "item-portrait"} group cursor-pointer transition-all duration-700 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${(index + 3) * 150}ms` }}
