@@ -130,28 +130,28 @@ const slides = [
     title: "TUDOR INTERIOR",
     description:
       "A Tudor revival home renovation featuring elegant interior details. The restoration work honors the architectural heritage of this distinctive style while providing modern comfort and functionality.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://media.admiddleeast.com/photos/67e236bc816add2b3749a68b/master/w_1600%2Cc_limit/T_Residence_DJDS_01.jpg",
   },
   {
     id: 19,
     title: "SPANISH COURTYARD",
     description:
       "A Spanish Colonial home courtyard renovation that creates a peaceful outdoor living space. The design incorporates traditional elements with modern landscaping and water features.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://st.hzcdn.com/simgs/pictures/patios/ams-landscape-design-studios-ams-landscape-design-studios-inc-img~3381aafd0acadef7_14-3778-1-e27dbed.jpg",
   },
   {
     id: 20,
     title: "GEORGIAN STAIRCASE DETAIL",
     description:
       "Detailed restoration of a Georgian staircase showcasing intricate woodwork and architectural craftsmanship. The work ensures that historic elements are preserved for future generations.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://st.hzcdn.com/simgs/pictures/staircases/st-anne-s-colin-cadle-photography-img~5c5197ca022dcb43_14-8633-1-4f7cb19.jpg",
   },
   {
     id: 21,
     title: "PRAIRIE FIREPLACE",
     description:
       "A Prairie Style home living room with a restored fireplace. The renovation emphasizes horizontal lines and natural materials, creating a warm and inviting space that reflects the movement's principles.",
-    image: "/images/elegant-craftsman-home-interior-with-wood-details-.jpg",
+    image: "https://images.squarespace-cdn.com/content/v1/63c6c8327819e83c1c16364f/1706565629809-R2BJPJQKW61CMB0289MK/Belgard+fireplace.png",
   },
 ]
 
