@@ -32,27 +32,27 @@ const Bathrooms = () => {
         <aside className="bath-sticky-sidebar">
           <div className="sidebar-content">
             <div className="sidebar-header">
-              <span className="brand-label">Service 04</span>
-              <h1 className="service-title">Bathrooms</h1>
+              <span className="brand-label">Service 01</span>
+              <h1 className="service-title">Historic Bathroom Remodel</h1>
             </div>
 
             <div className="metrics-grid">
               <div className="metric">
                 <span className="label">Est. Price</span>
-                <span className="value">$40k+</span>
+                <span className="value">$24k+</span>
               </div>
               <div className="metric">
                 <span className="label">Lead Time</span>
-                <span className="value">10-16 Weeks</span>
+                <span className="value">~3 Weeks</span>
               </div>
             </div>
 
             <div className="service-narrative">
               <p>
-                Upgraded bathrooms with improved comfort, durability, and visual appeal. This includes tile work, fixtures, storage optimization, and design touches suited to your space.
+                Preserving the intimacy of a historic home while upgrading essential functions. Our bathroom remodels respect original tile patterns and fixture placements, integrating modern plumbing and waterproofing systems discreetly behind the walls.
               </p>
               <p>
-                We specialize in creating luxurious, functional bathrooms that blend modern amenities with timeless elegance.
+                We specialize in period-appropriate subway tile, hexagon floor mosaics, and restoring original cast iron tubs.
               </p>
             </div>
 
@@ -66,22 +66,26 @@ const Bathrooms = () => {
         <main className="bath-feed">
           <div className="image-block" ref={addToRefs}>
             <img src="https://kowalske.com/wp-content/uploads/2020/08/wauwatosa-remodel-2-2560x1280.jpg" alt="Luxury Bathroom" />
-            <span className="caption">01 / Spa-Like Retreat</span>
+            <span className="caption">01 / Period Bath Restoration</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
             <div className="features-list">
               <div className="feature-row">
                 <span className="feature-num">01</span>
-                <span className="feature-name">Custom Vanities</span>
+                <span className="feature-name">Full Tile Remodel (Walls & Floors)</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">02</span>
-                <span className="feature-name">Premium Fixtures</span>
+                <span className="feature-name">Water Damage Remediation</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">03</span>
-                <span className="feature-name">Tile & Stone Work</span>
+                <span className="feature-name">Code-Compliant Ventilation</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">04</span>
+                <span className="feature-name">Restoration of Original Cabinetry</span>
               </div>
             </div>
           </div>

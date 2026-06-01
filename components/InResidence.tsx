@@ -2,13 +2,47 @@ import React from 'react';
 import './InResidence.css';
 
 const InResidence = () => {
-  // Placeholder data - replace with your actual project details
   const projects = [
-    { id: 1, title: "Repulse Bay Residence", caption: "REPULSE BAY RESIDENCE", meta: "Residential | 2024", img: "https://images.adsttc.com/media/images/5d51/58a4/284d/d1bc/4500/0207/medium_jpg/浅水湾PULSA_中国香港__by_Aedas_03.jpg?1565612188" },
-    { id: 2, title: "Kent Avenue Penthouse", caption: "KENT AVENUE PENTHOUSE", meta: "Residential | 2024", img: "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_72-1.jpg" },
-    { id: 3, title: "Fjord Boat House", caption: "FJORD BOAT HOUSE", meta: "Residential | 2020", img: "https://leibal.com/wp-content/uploads/2020/11/NORM_ARCHITECTS_FJORD_BOAT_HOUSE_18.jpg" },
-    { id: 4, title: "Archipelago House", caption: "ARCHIPELAGO HOUSE", meta: "Residential | 2020", img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/3c0ae232537929.56899d7433d6f.jpg" },
-    { id: 5, title: "Pavilion House", caption: "PAVILION HOUSE", meta: "Residential | 2021", img: "https://normcph.com/wp-content/uploads/2023/10/NormArchitects_PavilionHouse_PhotoCredit_JonasBjerrePoulsen_LowRes_18.jpg" },
+    {
+      id: 1,
+      title: "Historic Bathrooms",
+      caption: "HISTORIC BATHROOMS",
+      meta: "From $24,000 USD",
+      desc: "Preserving the intimacy of a historic home while upgrading essential plumbing, Mosaic tiling, and built-in cabinetry.",
+      img: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80"
+    },
+    {
+      id: 2,
+      title: "Period Kitchens",
+      caption: "PERIOD KITCHENS",
+      meta: "From $35,000 USD",
+      desc: "Custom Craftsman shaker or Victorian beadboard kitchens that conceal modern appliances in period millwork.",
+      img: "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80"
+    },
+    {
+      id: 3,
+      title: "Historic ADUs",
+      caption: "HISTORIC ADUS",
+      meta: "From $200,000 USD",
+      desc: "Adding detached accessory structures and garage suites designed to respect historic guidelines and COA rules.",
+      img: "https://i.pinimg.com/1200x/8e/9b/b1/8e9bb1f7a2df92158f8bcfd3bb693d11.jpg"
+    },
+    {
+      id: 4,
+      title: "Garages & Carports",
+      caption: "GARAGES & CARPORTS",
+      meta: "From $37,000 USD",
+      desc: "Detached garages and carriage houses built to complement your residence, featuring Hardie Shingle Shake siding.",
+      img: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1600&q=80"
+    },
+    {
+      id: 5,
+      title: "Preservation & Prep",
+      caption: "HISTORIC PRESERVATION",
+      meta: "Project Dependent",
+      desc: "Porch restoration, lead-safe paint prep, window salvaging, and period-correct painting to enhance curb presence.",
+      img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
+    },
   ];
 
   return (
@@ -21,8 +55,8 @@ const InResidence = () => {
 
       {/* 2. FLOATING SIDE TEXT (Vertical) */}
       {/* These are absolute positioned so they don't mess up the grid */}
-      <div className="vertical-text text-left">HOMES</div>
-      <div className="vertical-text text-right">HOMES</div>
+      <div className="vertical-text text-left">SERVICES</div>
+      <div className="vertical-text text-right">SERVICES</div>
 
       {/* 3. THE 5-COLUMN GRID */}
       <div className="residence-grid">
@@ -37,7 +71,7 @@ const InResidence = () => {
             <div className="item-info">
               <h3>{project.title}</h3>
               <p className="description">
-                A brief description of the project goes here to match the editorial style...
+                {project.desc}
               </p>
               <span className="meta">{project.meta}</span>
             </div>

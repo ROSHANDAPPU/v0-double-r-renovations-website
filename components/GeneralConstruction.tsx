@@ -32,31 +32,27 @@ const GeneralConstruction = () => {
         <aside className="gc-sticky-sidebar">
           <div className="sidebar-content">
             <div className="sidebar-header">
-              <span className="brand-label">Service 01</span>
-              <h1 className="service-title">General Construction<br />& Framing</h1>
+              <span className="brand-label">Service 04</span>
+              <h1 className="service-title">Carriage Houses, Garages<br />& Carports</h1>
             </div>
 
             <div className="metrics-grid">
               <div className="metric">
                 <span className="label">Est. Price</span>
-                <span className="value">$50k+</span>
+                <span className="value">$37k+</span>
               </div>
               <div className="metric">
                 <span className="label">Lead Time</span>
-                <span className="value">6-12 Weeks</span>
+                <span className="value">~4 Weeks</span>
               </div>
             </div>
 
             <div className="service-narrative">
               <p>
-                The General Construction service serves as the structural soul of
-                every Double R project. Beyond mere assembly, we provide expert
-                framing ensuring long-term stability.
+                As seen in the Shaw Residence project, we specialize in building detached garages and carports that enhance rather than detract from historic curb appeal. We reject modern metal boxes in favor of structures featuring Hardie Shingle Shake, decorative brackets, and custom wood doors designed to house classic and collector vehicles with style.
               </p>
               <p>
-                Our approach integrates code-compliant precision with premium
-                materials—utilizing pressure-treated lumber, reinforced concrete,
-                and steel supports.
+                Whether building a new 24'x32' garage or a functional carport, we integrate the building seamlessly into the historical narrative of the primary residence.
               </p>
             </div>
 
@@ -69,23 +65,27 @@ const GeneralConstruction = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="gc-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://commercecityframing.com/wp-content/uploads/2025/05/House-framing.jpg" alt="Framing" />
-            <span className="caption">01 / Structural Integrity</span>
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1600&q=80" alt="Detached Garage" />
+            <span className="caption">01 / Detached Garage & Carriage House</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
             <div className="features-list">
               <div className="feature-row">
                 <span className="feature-num">01</span>
-                <span className="feature-name">Structural Integrity</span>
+                <span className="feature-name">24'x32' Garage & 20'x24' Carport Construction</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">02</span>
-                <span className="feature-name">Code Compliance</span>
+                <span className="feature-name">Custom Hardie Shingle Shake Siding</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">03</span>
-                <span className="feature-name">Energy Efficiency</span>
+                <span className="feature-name">Exterior Carpentry & Skirting</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">04</span>
+                <span className="feature-name">Trex Deck Integration</span>
               </div>
             </div>
           </div>

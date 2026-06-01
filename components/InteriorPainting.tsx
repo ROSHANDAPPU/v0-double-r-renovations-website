@@ -32,27 +32,27 @@ const InteriorPainting = () => {
         <aside className="intp-sticky-sidebar">
           <div className="sidebar-content">
             <div className="sidebar-header">
-              <span className="brand-label">Service 05</span>
-              <h1 className="service-title">Interior Painting<br />& Finishes</h1>
+              <span className="brand-label">Service 06</span>
+              <h1 className="service-title">Historic Home Painting<br />& Prep</h1>
             </div>
 
             <div className="metrics-grid">
               <div className="metric">
                 <span className="label">Est. Price</span>
-                <span className="value">$15k+</span>
+                <span className="value">$9 / sq ft</span>
               </div>
               <div className="metric">
                 <span className="label">Lead Time</span>
-                <span className="value">4-8 Weeks</span>
+                <span className="value">~4 Weeks</span>
               </div>
             </div>
 
             <div className="service-narrative">
               <p>
-                A refined interior update with color choices, finish textures, and detail work. This service highlights the character of each room using cohesive tones and high quality materials.
+                Painting a historic home is not a cosmetic update; it is a preservation treatment. Our process involves careful surface preparation (scraping and sanding lead-safe practices), repair of damaged wood siding, and the application of high-quality primers and paints with a historic sheen.
               </p>
               <p>
-                We provide expert painting services that transform spaces with precision application and durable, eco-friendly finishes.
+                We help clients select colors from historically accurate palettes suitable for the home's architectural style and the McKinney Historic District guidelines.
               </p>
             </div>
 
@@ -63,25 +63,29 @@ const InteriorPainting = () => {
         </aside>
 
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
-        <main className="intp-feed">
+        <main className="pt-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Luxury Painted Interior Room" />
-            <span className="caption">01 / Color Harmony</span>
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Painted Wall" />
+            <span className="caption">01 / Historic Colors & Finishes</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
             <div className="features-list">
               <div className="feature-row">
                 <span className="feature-num">01</span>
-                <span className="feature-name">Premium Paints</span>
+                <span className="feature-name">Full Exterior Painting</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">02</span>
-                <span className="feature-name">Texture Finishes</span>
+                <span className="feature-name">Replacement of Rotten Trim</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">03</span>
-                <span className="feature-name">Trim & Molding</span>
+                <span className="feature-name">Hardie Soffit Installation</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">04</span>
+                <span className="feature-name">Crack Repair & Drywall Touchups</span>
               </div>
             </div>
           </div>

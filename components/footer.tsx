@@ -9,12 +9,12 @@ const navigationLinks = [
 ]
 
 const services = [
-  "Historic Restoration",
-  "Period Additions",
-  "Kitchen Renovation",
-  "Bathroom Restoration",
-  "Exterior Renovation",
-  "Custom Millwork",
+  "Historic Bathroom Remodel",
+  "Period-Appropriate Kitchens",
+  "Historic ADU",
+  "Carriage Houses & Garages",
+  "Historic Preservation",
+  "Historic Home Painting",
 ]
 
 export function Footer() {

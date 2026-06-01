@@ -32,27 +32,27 @@ const Kitchens = () => {
         <aside className="kit-sticky-sidebar">
           <div className="sidebar-content">
             <div className="sidebar-header">
-              <span className="brand-label">Service 03</span>
-              <h1 className="service-title">Kitchens</h1>
+              <span className="brand-label">Service 02</span>
+              <h1 className="service-title">Period-Appropriate Kitchens</h1>
             </div>
 
             <div className="metrics-grid">
               <div className="metric">
                 <span className="label">Est. Price</span>
-                <span className="value">$75k+</span>
+                <span className="value">$35k+</span>
               </div>
               <div className="metric">
                 <span className="label">Lead Time</span>
-                <span className="value">8-16 Weeks</span>
+                <span className="value">~4 Weeks</span>
               </div>
             </div>
 
             <div className="service-narrative">
               <p>
-                Custom kitchen upgrades that blend utility and refined style. From layout reconfiguration to cabinetry and lighting, this service enhances the heart of the home.
+                The kitchen is the heart of the home, but in a historic house, it shouldn't feel like a time capsule of the wrong decade. We design kitchens that honor the architectural era—whether that's Craftsman shaker cabinets or Victorian beadboard—while concealing modern appliances and providing ergonomic functionality for today's lifestyle.
               </p>
               <p>
-                We design kitchens that are both functional and beautiful, using premium materials and expert craftsmanship to create spaces you'll love to cook in.
+                We use custom woodwork, era-appropriate hardware, and meticulous details that respect the original footprints of the residence.
               </p>
             </div>
 
@@ -65,23 +65,23 @@ const Kitchens = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="kit-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwa2l0Y2hlbnxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Kitchen" />
-            <span className="caption">01 / Island Design</span>
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwa2l0Y2hlbnxlbnwwfHwwfHx8MA%3D%3D" alt="Historic Kitchen Design" />
+            <span className="caption">01 / Era-Appropriate Kitchens</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
             <div className="features-list">
               <div className="feature-row">
                 <span className="feature-num">01</span>
-                <span className="feature-name">Cabinetry & Storage</span>
+                <span className="feature-name">Custom Millwork to Match Trim Profiles</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">02</span>
-                <span className="feature-name">Countertops & Backsplash</span>
+                <span className="feature-name">Installation of Hardie Soffit for Vents</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">03</span>
-                <span className="feature-name">Appliances & Lighting</span>
+                <span className="feature-name">Restoration of Original Hardware & Windows</span>
               </div>
             </div>
           </div>

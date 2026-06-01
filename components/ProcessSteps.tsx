@@ -1,37 +1,43 @@
 "use client"
 import { useRef } from "react"
 import useIntersectionObserver from "./useIntersectionObserver"
+import "./ProcessSteps.css"
 
 const processSteps = [
   {
     step: 1,
-    title: "Initial Consultation",
-    description: "We begin with an in-depth discussion about your vision, lifestyle, budget, and project goals. This collaborative session helps us understand your unique needs and preferences.",
+    title: "Initial Consultation & Historic Scouting",
+    description: "Understanding the Structure & Vision: We begin with an in-depth discussion about your vision, lifestyle, and project goals. More importantly, we conduct a preliminary scouting assessment of your home to check for compliance with local historic district requirements, existing conditions of the foundation and framing, and potential construction permit hurdles before you invest in design.",
   },
   {
     step: 2,
-    title: "Space Assessment & Measurements",
-    description: "Our team conducts a thorough analysis of your space, taking precise measurements and evaluating structural elements, lighting, and existing features.",
+    title: "Collaborative Design & Material Selection",
+    description: "Selecting Period-Appropriate Materials: We work with you to finalize the design. This stage focuses on selecting materials that honor the home's era—choosing the correct profile of Hardie Shingle Shake, matching historic trim dimensions, or selecting tile that reflects the period. We ensure every component fits the architectural narrative.",
   },
   {
     step: 3,
-    title: "Design Development",
-    description: "We create detailed design concepts, mood boards, and 3D visualizations that bring your vision to life, incorporating your feedback at every stage.",
+    title: "Architectural Consultation",
+    description: "Defining the Structural Narrative: For projects requiring additions or structural changes, we engage with a trusted architect experienced in historic homes. Together, we create plans that not only meet modern building codes but also satisfy the aesthetic requirements of the McKinney Historic Preservation Board.",
   },
   {
     step: 4,
-    title: "Material Selection & Sourcing",
-    description: "We curate premium materials, finishes, furniture, and fixtures that align with your design aesthetic and quality standards.",
+    title: "COA & Permitting (Paperwork)",
+    description: "Navigating Historic District Compliance: We manage the entire Certificate of Appropriateness (COA) application and building permit process. This includes preparing all documentation, attending board hearings if necessary, and ensuring compliance with all local ordinances so you can avoid delays and fines.",
   },
   {
     step: 5,
-    title: "Project Planning & Coordination",
-    description: "Detailed project timelines, contractor coordination, and permit management ensure smooth execution from start to finish.",
+    title: "Precision Construction",
+    description: "Craftsmanship Over Convenience: Construction begins with a focus on protecting the existing historic fabric. Using our in-house team (no outsourcing), we execute the work with 11+ years of specialized experience—whether it's repairing a Pier and Beam foundation, framing a new garage, or installing intricate tilework.",
   },
   {
     step: 6,
-    title: "Installation & Final Reveal",
-    description: "Professional installation, styling, and final walkthrough to ensure every detail exceeds your expectations.",
+    title: "Client Walkthrough & Review",
+    description: "Ensuring the Vision is Realized: Before final sign-off, we conduct a thorough walkthrough. We review the workmanship, the flow of the space, and ensure that the finished product matches the design intent and historic character we set out to preserve.",
+  },
+  {
+    step: 7,
+    title: "Final Touchups & Preservation Care",
+    description: "The Last 1% Makes the Difference: We don't leave until the details are perfect. This final phase includes touchup paint on trim, adjusting historic door latches, and cleaning the site. We also provide guidance on how to maintain your newly restored or expanded historic home for the long term.",
   },
 ];
 
@@ -42,20 +48,20 @@ function ProcessStep({ step, title, description, index }: { step: number; title:
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-in-out ${
+      className={`process-card-wrapper transition-all duration-700 ease-in-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="relative w-full h-64 cursor-pointer group overflow-hidden bg-black border rounded-lg p-6 flex flex-col justify-center items-center transition-all duration-300 hover:shadow-lg hover:shadow-heritage-deep-green/50" style={{borderColor: '#1B3A34'}}>
-        {/* Front */}
-        <div className="transition-opacity duration-500 group-hover:opacity-0">
-          <div className="font-serif font-bold text-[48px] mb-4" style={{color: '#1B3A34'}}>{`0${step}`}</div>
-          <h3 className="font-serif font-semibold text-[24px] text-white text-center">{title}</h3>
+      <div className="process-card">
+        <div className="card-header">
+          <span className="phase-label">PHASE 0{step}</span>
+          <span className="step-number">0{step}</span>
         </div>
-        {/* Back */}
-        <div className="absolute inset-0 p-6 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <p className="text-gray-400 text-center">{description}</p>
+        <div className="card-content-box">
+          <div className="accent-line" />
+          <h3 className="card-title">{title}</h3>
+          <p className="card-description">{description}</p>
         </div>
       </div>
     </div>
@@ -64,11 +70,11 @@ function ProcessStep({ step, title, description, index }: { step: number; title:
 
 export function ProcessSteps() {
   return (
-    <section className="bg-black py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-center mb-4" style={{color: '#1B3A34'}}>Our Process</p>
-        <h2 className="font-serif font-semibold text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.015em] text-center mb-12 text-white">OUR REMODELLING PROCESS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="process-section">
+      <div className="process-container">
+        <p className="process-eyebrow">OUR PROCESS</p>
+        <h2 className="process-main-title">OUR PRESERVATION PROCESS</h2>
+        <div className="process-grid">
           {processSteps.map((step, index) => (
             <ProcessStep key={step.step} {...step} index={index} />
           ))}

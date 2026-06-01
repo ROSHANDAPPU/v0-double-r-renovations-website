@@ -32,27 +32,27 @@ const FullHomeRemodels = () => {
         <aside className="fhr-sticky-sidebar">
           <div className="sidebar-content">
             <div className="sidebar-header">
-              <span className="brand-label">Service 02</span>
-              <h1 className="service-title">Full-Home<br />Remodels</h1>
+              <span className="brand-label">Service 05</span>
+              <h1 className="service-title">Historic Preservation &<br />Porch Restoration</h1>
             </div>
 
             <div className="metrics-grid">
               <div className="metric">
                 <span className="label">Est. Price</span>
-                <span className="value">$150k+</span>
+                <span className="value">Project Dep.</span>
               </div>
               <div className="metric">
                 <span className="label">Lead Time</span>
-                <span className="value">12-24 Weeks</span>
+                <span className="value">Project Dep.</span>
               </div>
             </div>
 
             <div className="service-narrative">
               <p>
-                A complete transformation of interior spaces with thoughtful design choices, functional improvements, and modern aesthetics, tailored to bring a renewed identity to your home.
+                This is our foundation. We focus on preserving the "historic look" by salvaging and repairing original materials. Whether restoring a grand wraparound porch or replicating intricate millwork, we use traditional joinery techniques and high-quality wood species to bring aging architectural details back to life without erasing the patina of time.
               </p>
               <p>
-                Our full-home remodels integrate high-end finishes, custom layouts, and sustainable materials to create spaces that reflect your lifestyle and vision.
+                We respect the history of each home, ensuring structural elements are reinforced with modern code safety while preserving custom historic details.
               </p>
             </div>
 
@@ -65,23 +65,23 @@ const FullHomeRemodels = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="fhr-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://www.thespruce.com/thmb/c9ibNdGHBKMb8EkT3pKDqYiDN-I=/5130x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-601799249-5890dfb55f9b5874ee7dcd57.jpg" alt="Living Room" />
-            <span className="caption">01 / Living Spaces</span>
+            <img src="https://static01.nyt.com/images/2019/12/22/realestate/20RENOVATIONS-promo1/20RENOVATIONS-slide-6DHV-superJumbo.jpg" alt="Historic Preservation" />
+            <span className="caption">01 / Timeless Restoration</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
             <div className="features-list">
               <div className="feature-row">
                 <span className="feature-num">01</span>
-                <span className="feature-name">Kitchen & Dining</span>
+                <span className="feature-name">Carpentry Replacement Matching Historic Profiles</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">02</span>
-                <span className="feature-name">Living Areas</span>
+                <span className="feature-name">Structural Repair of Porches & Balustrades</span>
               </div>
               <div className="feature-row">
                 <span className="feature-num">03</span>
-                <span className="feature-name">Bedrooms & Bathrooms</span>
+                <span className="feature-name">Wood Window Restoration</span>
               </div>
             </div>
           </div>

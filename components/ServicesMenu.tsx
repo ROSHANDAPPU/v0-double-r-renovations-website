@@ -7,33 +7,39 @@ import styles from "./ServicesMenu.module.css";
 
 const services = [
   {
-    slug: "general-construction",
-    name: "General Construction & Framing",
-    description: "Reliable structural work that forms the backbone of any home improvement project. This service covers essential framing, load bearing support, and solid foundational construction designed for long lasting performance.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
-  },
-  {
-    slug: "full-home-remodels",
-    name: "Full-Home Remodels",
-    description: "A complete transformation of interior spaces with thoughtful design choices, functional improvements, and modern aesthetics, tailored to bring a renewed identity to your home.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-  },
-  {
-    slug: "kitchens",
-    name: "Kitchens",
-    description: "Custom kitchen upgrades that blend utility and refined style. From layout reconfiguration to cabinetry and lighting, this service enhances the heart of the home.",
-    image: "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80",
-  },
-  {
     slug: "bathrooms",
-    name: "Bathrooms",
-    description: "Upgraded bathrooms with improved comfort, durability, and visual appeal. This includes tile work, fixtures, storage optimization, and design touches suited to your space.",
+    name: "Historic Bathroom Remodel",
+    description: "Preserving the intimacy of a historic home while upgrading essential functions. Our bathroom remodels respect original tile patterns and fixture placements, integrating modern plumbing and waterproofing systems discreetly behind the walls. We specialize in period-appropriate subway tile, hexagon floor mosaics, and restoring original cast iron tubs.",
     image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80",
   },
   {
+    slug: "kitchens",
+    name: "Period-Appropriate Kitchens",
+    description: "The kitchen is the heart of the home, but in a historic house, it shouldn't feel like a time capsule of the wrong decade. We design kitchens that honor the architectural era—whether that's Craftsman shaker cabinets or Victorian beadboard—while concealing modern appliances and providing ergonomic functionality for today's lifestyle.",
+    image: "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80",
+  },
+  {
+    slug: "historic-houses-remodeling",
+    name: "Historic ADU (Accessory Dwelling Unit)",
+    description: "Adding an accessory structure to a historic property requires navigating strict Certificate of Appropriateness (COA) guidelines. We design and build detached ADUs, garage apartments, or studios that appear as if they were original outbuildings. We use matching rooflines, siding profiles, and window muntin patterns to ensure the new structure is a subordinate, respectful addition to the primary historic resource.",
+    image: "https://i.pinimg.com/1200x/8e/9b/b1/8e9bb1f7a2df92158f8bcfd3bb693d11.jpg",
+  },
+  {
+    slug: "general-construction",
+    name: "Carriage Houses, Garages & Carports",
+    description: "As seen in the Shaw Residence project, we specialize in building detached garages and carports that enhance rather than detract from historic curb appeal. We reject modern metal boxes in favor of structures featuring Hardie Shingle Shake, decorative brackets, and custom wood doors designed to house classic and collector vehicles with style.",
+    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1200&q=80",
+  },
+  {
+    slug: "full-home-remodels",
+    name: "Historic Preservation & Porch Restoration",
+    description: "This is our foundation. We focus on preserving the \"historic look\" by salvaging and repairing original materials. Whether restoring a grand wraparound porch or replicating intricate millwork, we use traditional joinery techniques and high-quality wood species to bring aging architectural details back to life without erasing the patina of time.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+  },
+  {
     slug: "interior-painting",
-    name: "Interior Painting & Finishes",
-    description: "A refined interior update with color choices, finish textures, and detail work. This service highlights the character of each room using cohesive tones and high quality materials.",
+    name: "Historic Home Painting & Prep",
+    description: "Painting a historic home is not a cosmetic update; it is a preservation treatment. Our process involves careful surface preparation (scraping and sanding lead-safe practices), repair of damaged wood siding, and the application of high-quality primers and paints with a historic sheen. We help clients select colors from historically accurate palettes suitable for the home's architectural style and the McKinney Historic District guidelines.",
     image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
   },
 ];
