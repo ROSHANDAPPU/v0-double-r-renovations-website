@@ -58,7 +58,7 @@ interface PortfolioProps {
 export function Portfolio({ sectionRef: externalRef, isVisible: externalIsVisible, showVerticalText = false, backgroundColor = '#000' }: PortfolioProps) {
   const internalRef = useRef<HTMLElement>(null);
   const sectionRef = externalRef || internalRef;
-  const isVisible = externalIsVisible !== undefined ? externalIsVisible : useIntersectionObserver(sectionRef, { threshold: 0.5 });
+  const isVisible = externalIsVisible !== undefined ? externalIsVisible : useIntersectionObserver(sectionRef, { threshold: 0.1 });
 
   return (
     <section

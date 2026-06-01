@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://ROSHANDAPPU.github.io/v0-double-r-renovations-website",
   "scripts": {
-    "build": "next build",
+    "build": "next build --webpack",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start",

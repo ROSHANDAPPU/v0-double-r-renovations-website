@@ -16,7 +16,7 @@ export default function Home() {
   const portfolioRef = useRef<HTMLElement>(null);
 
   const isHeroVisible = useIntersectionObserver(heroRef, { threshold: 0.5 });
-  const isPortfolioVisible = useIntersectionObserver(portfolioRef, { threshold: 0.5 });
+  const isPortfolioVisible = useIntersectionObserver(portfolioRef, { threshold: 0.1 });
 
   const isRecentVisible = isHeroVisible || isPortfolioVisible;
 
