@@ -2,6 +2,7 @@
 
 import * as Accordion from "@radix-ui/react-accordion"
 import { Wrench, CircleHelp, MessageSquare, Calendar, ShieldCheck, ChevronDown } from "lucide-react"
+import "./PostProjectCare.css"
 
 const postProjectCare = {
   eyebrow: "POST-PROJECT CARE",
@@ -39,33 +40,33 @@ const postProjectCare = {
 
 export function PostProjectCare() {
   return (
-    <section className="bg-brand-beige py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em]" style={{color: '#1B3A34'}}>{postProjectCare.eyebrow}</p>
-          <h2 className="font-serif font-semibold text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.015em] mt-2 text-white">{postProjectCare.title}</h2>
-          <h3 className="text-2xl font-bold text-white mt-4">{postProjectCare.subtitle}</h3>
-          <p className="max-w-2xl mx-auto text-white mt-6">{postProjectCare.description}</p>
+    <section className="care-section">
+      <div className="care-container">
+        <div className="care-header">
+          <p className="care-eyebrow">{postProjectCare.eyebrow}</p>
+          <h2 className="care-title">{postProjectCare.title}</h2>
+          <h3 className="care-subtitle">{postProjectCare.subtitle}</h3>
+          <p className="care-description">{postProjectCare.description}</p>
         </div>
-        <Accordion.Root type="single" collapsible className="space-y-4">
+        <Accordion.Root type="single" collapsible className="accordion-root">
           {postProjectCare.services.map((service, index) => (
-            <Accordion.Item key={index} value={`item-${index}`} className="rounded-lg shadow-sm transition-all duration-300" style={{backgroundColor: '#1B3A34'}}>
-              <Accordion.Header>
-                <Accordion.Trigger className="group flex items-center justify-between w-full p-6 text-left">
-                  <div className="flex items-center">
-                    <div className="text-white">
+            <Accordion.Item key={index} value={`item-${index}`} className="accordion-item">
+              <Accordion.Header className="accordion-header">
+                <Accordion.Trigger className="accordion-trigger">
+                  <div className="accordion-trigger-left">
+                    <div className="accordion-icon">
                       {service.icon}
                     </div>
-                    <p className="text-lg font-semibold ml-6 text-white">
+                    <p className="accordion-title">
                       {service.text}
                     </p>
                   </div>
-                  <ChevronDown className="w-5 h-5 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                  <ChevronDown className="w-5 h-5 accordion-chevron" />
                 </Accordion.Trigger>
               </Accordion.Header>
-              <Accordion.Content className="overflow-hidden transition-all duration-300 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
-                <div className="px-6 pb-6 pt-0">
-                  <p className="text-white">{service.content}</p>
+              <Accordion.Content className="accordion-content">
+                <div className="accordion-content-inner">
+                  <p>{service.content}</p>
                 </div>
               </Accordion.Content>
             </Accordion.Item>
@@ -75,3 +76,4 @@ export function PostProjectCare() {
     </section>
   );
 }
+

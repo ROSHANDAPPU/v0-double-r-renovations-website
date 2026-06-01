@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useState, useEffect } from 'react';
 import './About.css';
 import { Portfolio } from './portfolio';
 import { CTA } from './cta';
@@ -6,10 +8,16 @@ import { Header } from './header';
 import { Footer } from './footer';
 
 const About = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <div className="about-page-container">
+      <div className={`about-page-container ${isLoaded ? 'is-loaded' : ''}`}>
 
       {/* 1. THE STORY SECTION (Split Screen) */}
       <section className="about-story-section">

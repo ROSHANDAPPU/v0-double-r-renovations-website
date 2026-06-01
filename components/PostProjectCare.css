@@ -1,0 +1,239 @@
+.care-section {
+  background-color: #000000;
+  padding: 100px 24px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.care-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.care-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.care-eyebrow {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #1B3A34; /* Signature brand deep green instead of gold */
+  margin-bottom: 12px;
+}
+
+.care-title {
+  font-family: var(--font-serif), serif;
+  font-size: 32px;
+  font-weight: 400; /* Sleek elegant weight */
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .care-title {
+    font-size: 48px;
+  }
+}
+
+.care-subtitle {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff; /* Solid prominent white */
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .care-subtitle {
+    font-size: 20px;
+  }
+}
+
+.care-description {
+  max-width: 650px;
+  margin: 24px auto 0 auto;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Accordion Root */
+.accordion-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Spacing between blocky cards */
+  margin-top: 40px;
+}
+
+/* Accordion Item */
+.accordion-item {
+  background-color: #1B3A34; /* Solid brand green background */
+  border-radius: 12px; /* Smoother modern rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-item:hover {
+  background-color: #224941; /* Premium slightly lighter green glow on hover */
+  transform: translateY(-2px); /* Elite card hover lift */
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 12px 28px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(27, 58, 52, 0.2);
+}
+
+/* Active Open Card Styling */
+.accordion-item[data-state='open'] {
+  background-color: #112421; /* Rich deeper green for active state */
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 24px 48px rgba(0, 0, 0, 0.6), 
+    0 0 32px rgba(27, 58, 52, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Accordion Header */
+.accordion-header {
+  margin: 0;
+  display: flex;
+}
+
+/* Accordion Trigger */
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 28px; /* Padding for blocky card layout */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-trigger:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.accordion-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accordion-icon {
+  color: #ffffff; /* White icons */
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-trigger:hover .accordion-icon {
+  transform: scale(1.12);
+  opacity: 1;
+}
+
+.accordion-title {
+  font-family: var(--font-sans), sans-serif; /* Elegant sans-serif titles matching the screenshot */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (min-width: 768px) {
+  .accordion-title {
+    font-size: 18px;
+  }
+}
+
+.accordion-trigger:hover .accordion-title {
+  color: #ffffff;
+  transform: translateX(4px); /* Subtle shift */
+}
+
+/* Chevron */
+.accordion-chevron {
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-trigger:hover .accordion-chevron {
+  color: #ffffff;
+}
+
+.accordion-trigger[data-state='open'] .accordion-chevron {
+  transform: rotate(180deg);
+  color: #ffffff;
+}
+
+/* Content Panel */
+.accordion-content {
+  overflow: hidden;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.accordion-content[data-state='open'] {
+  animation: slideDown 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-content[data-state='closed'] {
+  animation: slideUp 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-content-inner {
+  padding: 20px 28px 28px 76px; /* Aligned nicely with vertical spacing for blocky layout */
+  max-width: 780px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06); /* Elegant clean modern separating line */
+  margin-top: 4px;
+}
+
+/* Micro-interaction: text content slides and fades in gently */
+.accordion-content[data-state='open'] .accordion-content-inner {
+  animation: fadeInContent 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Keyframes for Smooth Animation */
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}

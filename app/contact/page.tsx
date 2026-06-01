@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import './ContactForm.css';
 
@@ -14,6 +14,11 @@ export default function ContactPage() {
   const [selectedService, setSelectedService] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [heroVisible, setHeroVisible] = useState(false)
+
+  useEffect(() => {
+    setHeroVisible(true)
+  }, [])
 
   const serviceOptions = [
     { id: 'remodel', title: 'Full-Home Remodels', price: '$75,000' },
@@ -68,13 +73,25 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-          <h1 className="font-sans text-[14px] md:text-[16px] font-normal tracking-[0.35em] mb-4 md:mb-6 text-heritage-deep-green">
+          <h1
+            className={`font-sans text-[14px] md:text-[16px] font-normal tracking-[0.35em] mb-4 md:mb-6 text-heritage-deep-green transition-all duration-700 ${
+              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
             CONTACT
           </h1>
-          <p className="font-serif text-4xl md:text-6xl mb-4 md:mb-6">
+          <p
+            className={`font-serif text-4xl md:text-6xl mb-4 md:mb-6 transition-all duration-700 delay-100 ${
+              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
             INQUIRIES
           </p>
-          <p className="font-sans text-[14px] md:text-[16px] font-normal text-white/80 tracking-[0.2em]">
+          <p
+            className={`font-sans text-[14px] md:text-[16px] font-normal text-white/80 tracking-[0.2em] transition-all duration-700 delay-200 ${
+              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
             Begin the conversation about your next project.
           </p>
         </div>
