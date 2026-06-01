@@ -33,7 +33,7 @@ const InResidence = () => {
       caption: "GARAGES & CARPORTS",
       meta: "From $37,000 USD",
       desc: "Detached garages and carriage houses built to complement your residence, featuring Hardie Shingle Shake siding.",
-      img: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1600&q=80"
+      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80"
     },
     {
       id: 5,
