@@ -54,7 +54,7 @@ export function ServicesMenu() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-[11px] font-sans font-bold uppercase tracking-[0.3em] mb-10 text-[#C5B388]/90">
+            <h2 className="text-[11px] font-sans font-bold uppercase tracking-[0.3em] mb-10 text-[#1B4D3E]">
               EXPLORE OUR SERVICES
             </h2>
             <ul className="space-y-6">
@@ -71,7 +71,7 @@ export function ServicesMenu() {
                     <ArrowRight 
                       className={`w-6 h-6 transition-all duration-300 transform ${
                         activeService === index 
-                          ? "translate-x-0 opacity-100 text-[#C5B388]" 
+                          ? "translate-x-0 opacity-100 text-[#1B4D3E]" 
                           : "-translate-x-2 opacity-0 text-white"
                       }`} 
                     />
@@ -105,7 +105,7 @@ export function ServicesMenu() {
                   unoptimized
                 />
                 <div className="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-black/65 border border-white/10 p-5 rounded-2xl transition-all duration-300">
-                    <span className="text-[9px] font-sans font-bold tracking-[0.25em] text-[#C5B388] uppercase block mb-1.5">
+                    <span className="text-[9px] font-sans font-bold tracking-[0.25em] text-[#1B4D3E] uppercase block mb-1.5">
                       SERVICE DETAIL
                     </span>
                     <p className="text-[13px] leading-relaxed text-white/90 font-sans">
