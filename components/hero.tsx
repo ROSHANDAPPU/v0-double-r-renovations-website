@@ -18,7 +18,7 @@ const slides = [
     title: "The Art of the Period-Appropriate Garage",
     description:
       "Housing a classic car collection requires more than just a concrete box. We design and build detached garages and carriage houses that complement the original architectural lines of your historic residence, featuring materials like Hardie Shingle Shake and custom millwork that honor the era.",
-    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600&q=80",
   },
   {
     id: 3,
