@@ -57,17 +57,17 @@
 /* Container for the grid */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Columns exactly */
-  gap: 15px; /* Space between boxes */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   margin-top: 15px;
   margin-bottom: 40px;
 }
 
 /* The Individual Card (Unselected) */
 .service-card {
-  background-color: transparent; /* Keep it blends with black background */
-  border: 1px solid #333; /* Subtle dark grey border */
-  border-radius: 6px; /* Slightly rounded corners like reference */
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
   padding: 20px 15px;
   cursor: pointer;
   display: flex;
@@ -88,26 +88,28 @@
 /* Typography inside the card */
 .service-title {
   font-family: sans-serif;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 400 !important;
+  font-size: 12px !important;
   color: #fff;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+  text-transform: none;
 }
 
-.service-price {
+.service-price,
+.service-subtitle {
   font-family: sans-serif;
-  font-size: 11px;
-  color: #888; /* Muted grey for price */
+  font-size: 9px;
+  color: #888;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .service-grid {
-    grid-template-columns: 1fr; /* Stack vertically on phone */
+    grid-template-columns: 1fr;
   }
   .service-card {
-    flex-direction: row; /* Layout side-by-side on mobile? Or keep stacked */
+    flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
