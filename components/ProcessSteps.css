@@ -75,7 +75,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, #0b1513 0%, #050a09 100%);
-  border: 1px solid rgba(197, 179, 136, 0.15); /* Soft gold/brass outline */
+  border: 1px solid rgba(27, 58, 52, 0.3); /* Subtle deep green brand outline instead of gold */
   border-radius: 20px;
   padding: 40px;
   display: flex;
@@ -105,7 +105,7 @@
 
 .process-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(197, 179, 136, 0.5); /* Highlighted Gold */
+  border-color: rgba(27, 77, 62, 0.8); /* Brighter brand accent green instead of gold */
   background: linear-gradient(180deg, #122723 0%, #07100e 100%);
   box-shadow: 
     0 30px 60px rgba(0, 0, 0, 0.6), 
@@ -133,8 +133,8 @@
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #C5B388;
-  opacity: 0.8;
+  color: #1B4D3E; /* Brand accent green instead of gold */
+  opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
@@ -143,13 +143,13 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 1;
-  color: rgba(197, 179, 136, 0.12); /* Extremely subtle outline feel */
+  color: rgba(27, 58, 52, 0.2); /* Subtle deep green brand number outline */
   transition: all 0.5s ease;
 }
 
 .process-card:hover .step-number {
-  color: #C5B388;
-  text-shadow: 0 0 15px rgba(197, 179, 136, 0.3);
+  color: #1B4D3E; /* Brand accent green number hover */
+  text-shadow: 0 0 15px rgba(27, 77, 62, 0.4);
   transform: scale(1.1);
 }
 
@@ -168,7 +168,7 @@
 .accent-line {
   height: 1px;
   width: 32px;
-  background-color: #C5B388;
+  background-color: #1B4D3E; /* Brand accent green horizontal line */
   margin-bottom: 24px;
   transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
