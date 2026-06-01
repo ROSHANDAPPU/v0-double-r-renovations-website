@@ -70,16 +70,24 @@ const Kitchens = () => {
           </div>
 
           <div className="text-block" ref={addToRefs}>
-            <h2 className="section-header">Key Elements</h2>
             <div className="features-list">
-              <div className="feature">01. Cabinetry & Storage</div>
-              <div className="feature">02. Countertops & Backsplash</div>
-              <div className="feature">03. Appliances & Lighting</div>
+              <div className="feature-row">
+                <span className="feature-num">01</span>
+                <span className="feature-name">Cabinetry & Storage</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">02</span>
+                <span className="feature-name">Countertops & Backsplash</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">03</span>
+                <span className="feature-name">Appliances & Lighting</span>
+              </div>
             </div>
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2l0Y2hlbiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Cabinet Detail" />
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80" alt="Custom Kitchen Cabinetry Detail" />
             <span className="caption">02 / Custom Cabinetry</span>
           </div>
         </main>

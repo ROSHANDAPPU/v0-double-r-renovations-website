@@ -235,3 +235,52 @@ html {
     transform-origin: right;
   }
 }
+
+/* Service Pages Key Features styling */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0; /* py-4 equivalent */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* border-white/10 separator */
+}
+
+.feature-row:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* top line */
+}
+
+.feature-num {
+  font-family: var(--font-serif), serif;
+  font-size: 14px;
+  opacity: 0.45; /* ~40-50% opacity */
+  color: var(--white);
+  min-width: 32px;
+}
+
+.feature-name {
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em; /* tracking-wide */
+}
+
+.text-block {
+  margin-bottom: 150px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.text-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

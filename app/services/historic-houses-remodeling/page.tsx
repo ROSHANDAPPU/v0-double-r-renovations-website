@@ -9,7 +9,7 @@ export default function HistoricHousesRemodelingPage() {
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('https://www.londonchimneyservices.com/wp-content/uploads/2016/02/slide4.jpg')` }}
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80')` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 text-center">

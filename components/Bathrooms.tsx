@@ -70,16 +70,24 @@ const Bathrooms = () => {
           </div>
 
           <div className="text-block" ref={addToRefs}>
-            <h2 className="section-header">Key Features</h2>
             <div className="features-list">
-              <div className="feature">01. Custom Vanities</div>
-              <div className="feature">02. Premium Fixtures</div>
-              <div className="feature">03. Tile & Stone Work</div>
+              <div className="feature-row">
+                <span className="feature-num">01</span>
+                <span className="feature-name">Custom Vanities</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">02</span>
+                <span className="feature-name">Premium Fixtures</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">03</span>
+                <span className="feature-name">Tile & Stone Work</span>
+              </div>
             </div>
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.squarespace-cdn.com/content/v1/55f2140de4b08cb02e0a3a5e/3d03d07d-97f3-4d13-abf3-638aa1b3fd1d/IMG_7081.jpg" alt="Vanity Detail" />
+            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80" alt="Luxury Bathroom Vanity Detail" />
             <span className="caption">02 / Elegant Details</span>
           </div>
         </main>

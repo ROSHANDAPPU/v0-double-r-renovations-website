@@ -70,16 +70,24 @@ const FullHomeRemodels = () => {
           </div>
 
           <div className="text-block" ref={addToRefs}>
-            <h2 className="section-header">Key Areas</h2>
             <div className="features-list">
-              <div className="feature">01. Kitchen & Dining</div>
-              <div className="feature">02. Living Areas</div>
-              <div className="feature">03. Bedrooms & Bathrooms</div>
+              <div className="feature-row">
+                <span className="feature-num">01</span>
+                <span className="feature-name">Kitchen & Dining</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">02</span>
+                <span className="feature-name">Living Areas</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">03</span>
+                <span className="feature-name">Bedrooms & Bathrooms</span>
+              </div>
             </div>
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://media.istockphoto.com/id/1470468268/photo/female-electrician-working-in-a-kitchen-remodelling.jpg?s=612x612&w=0&k=20&c=C2tERgTBZbNYdLtIJ0dZhwM_xUSx5B-cva9AMHeJ5Ok=" alt="Kitchen" />
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Beautiful Modern Home Living Room" />
             <span className="caption">02 / Modern Kitchen</span>
           </div>
         </main>

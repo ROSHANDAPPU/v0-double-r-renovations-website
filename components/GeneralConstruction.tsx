@@ -74,16 +74,24 @@ const GeneralConstruction = () => {
           </div>
 
           <div className="text-block" ref={addToRefs}>
-            <h2 className="section-header">Core Features</h2>
             <div className="features-list">
-              <div className="feature">01. Structural Integrity</div>
-              <div className="feature">02. Code Compliance</div>
-              <div className="feature">03. Energy Efficiency</div>
+              <div className="feature-row">
+                <span className="feature-num">01</span>
+                <span className="feature-name">Structural Integrity</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">02</span>
+                <span className="feature-name">Code Compliance</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">03</span>
+                <span className="feature-name">Energy Efficiency</span>
+              </div>
             </div>
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://t3.ftcdn.net/jpg/01/79/28/02/360_F_179280204_Yu8ysrTC8ep7Ikl6AjPSaSQoQ9aSGzif.jpg" alt="Detail" />
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="House Wooden Framing Construction" />
             <span className="caption">02 / Precision Joinery</span>
           </div>
         </main>

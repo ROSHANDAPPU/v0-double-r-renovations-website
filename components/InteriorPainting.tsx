@@ -65,21 +65,29 @@ const InteriorPainting = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="intp-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/1920s_interior_style_pqwrx.jpg" alt="Painted Interior" />
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Luxury Painted Interior Room" />
             <span className="caption">01 / Color Harmony</span>
           </div>
 
           <div className="text-block" ref={addToRefs}>
-            <h2 className="section-header">Finishing Touches</h2>
             <div className="features-list">
-              <div className="feature">01. Premium Paints</div>
-              <div className="feature">02. Texture Finishes</div>
-              <div className="feature">03. Trim & Molding</div>
+              <div className="feature-row">
+                <span className="feature-num">01</span>
+                <span className="feature-name">Premium Paints</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">02</span>
+                <span className="feature-name">Texture Finishes</span>
+              </div>
+              <div className="feature-row">
+                <span className="feature-num">03</span>
+                <span className="feature-name">Trim & Molding</span>
+              </div>
             </div>
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/regional_adaptations_of_art_deco_2vip6.jpg" alt="Detail Work" />
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&q=80" alt="Interior House Painting and Finishes" />
             <span className="caption">02 / Artisan Details</span>
           </div>
         </main>
@@ -100,7 +108,7 @@ const InteriorPainting = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/1920s_decor_inspiration_sources_lg14k.jpg" alt="Premium Paint" />
+                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1200&q=80" alt="Farrow and Ball Premium Paint Palette" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">FINISHES</span>
@@ -118,7 +126,7 @@ const InteriorPainting = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/luxurious_black_and_gold_elegance_mbksz.jpg" alt="Texture Tool" />
+                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&q=80" alt="Venetian Plaster Textured Wall Finish" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">TOOLS</span>
@@ -131,7 +139,7 @@ const InteriorPainting = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://homedecorelooks.com/wp-content/uploads/2025/07/decorative_tassel_fringe_beading_jcj3p.jpg" alt="Wood Stain" />
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1200&q=80" alt="Elegant Stained Oak Wood Paneling" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">WOODWORK</span>
