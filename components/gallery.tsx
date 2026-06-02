@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './gallery.css';
 import Image from 'next/image';
+import { withBasePath } from '@/lib/basePath';
 
 const images = [
     { id: 1, src: '/images/arts-and-crafts-cottage-kitchen-renovation-vintage.jpg', title: 'Arts and Crafts Kitchen' },
@@ -30,7 +31,7 @@ const Gallery = () => {
             <div className="gallery-grid">
                 {images.map((image) => (
                     <div key={image.id} className="gallery-item" onClick={() => setSelectedImg(image.src)}>
-                        <Image src={image.src} alt={image.title} width={500} height={500} />
+                        <Image src={withBasePath(image.src)} alt={image.title} width={500} height={500} />
                         <div className="gallery-item-overlay">
                             <p>{image.title}</p>
                         </div>
@@ -41,7 +42,7 @@ const Gallery = () => {
             {selectedImg && (
                 <div className="lightbox" onClick={() => setSelectedImg(null)}>
                     <span className="close-button">&times;</span>
-                    <Image src={selectedImg} alt="Enlarged view" layout="fill" objectFit="contain" className="lightbox-content" />
+                    <Image src={withBasePath(selectedImg)} alt="Enlarged view" layout="fill" objectFit="contain" className="lightbox-content" />
                 </div>
             )}
         </div>

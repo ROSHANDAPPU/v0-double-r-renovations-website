@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, RefObject } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { VerticalText } from "./VerticalText"
+import { withBasePath } from "@/lib/basePath"
 
 const slides = [
   {
@@ -69,7 +70,7 @@ export function Hero({ sectionRef, isVisible }: HeroProps) {
           }`}
         >
           <Image
-            src={slide.image || "/placeholder.svg"}
+            src={withBasePath(slide.image || "/placeholder.svg")}
             alt={slide.title}
             fill
             className="object-cover"

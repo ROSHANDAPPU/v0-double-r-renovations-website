@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import styles from "./ServicesMenu.module.css";
+import { withBasePath } from "@/lib/basePath";
 
 const services = [
   {
@@ -98,7 +99,7 @@ export function ServicesMenu() {
                 }`}
               >
                 <Image
-                  src={service.image}
+                  src={withBasePath(service.image)}
                   alt={service.name}
                   fill
                   className="object-cover transition-transform duration-700 group-hover/img:scale-105"

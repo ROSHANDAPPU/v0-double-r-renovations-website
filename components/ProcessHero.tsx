@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/basePath"
 
 export function ProcessHero() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -14,7 +15,7 @@ export function ProcessHero() {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/process/hero.jpg"
+          src={withBasePath("/images/process/hero.jpg")}
           alt="Process background"
           fill
           className="object-cover"

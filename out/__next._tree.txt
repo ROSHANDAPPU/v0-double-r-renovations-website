@@ -4,4 +4,4 @@
 :HL["/v0-double-r-renovations-website/_next/static/css/f2c1e763efa0d591.css","style"]
 :HL["/v0-double-r-renovations-website/_next/static/css/a4899f15cd009b9c.css","style"]
 :HL["/v0-double-r-renovations-website/_next/static/css/ff506ba988212282.css","style"]
-0:{"buildId":"yDZxHGw1foghOZvfbqhco","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"iEmWh5K66YtLOUE0fw1Vj","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

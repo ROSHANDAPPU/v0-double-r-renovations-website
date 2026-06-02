@@ -3,4 +3,4 @@
 :HL["/v0-double-r-renovations-website/_next/static/css/8b06cb22a2678c9a.css","style"]
 :HL["/v0-double-r-renovations-website/_next/static/css/90562d3e0afd650b.css","style"]
 :HL["/v0-double-r-renovations-website/_next/static/css/a4899f15cd009b9c.css","style"]
-0:{"buildId":"yDZxHGw1foghOZvfbqhco","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about","paramType":null,"paramKey":"about","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"iEmWh5K66YtLOUE0fw1Vj","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about","paramType":null,"paramKey":"about","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
