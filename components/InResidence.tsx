@@ -1,5 +1,6 @@
 import React from 'react';
 import './InResidence.css';
+import { withBasePath } from '@/lib/basePath';
 
 const InResidence = () => {
   const projects = [
@@ -9,7 +10,7 @@ const InResidence = () => {
       caption: "HISTORIC BATHROOMS",
       meta: "From $24,000 USD",
       desc: "Preserving the intimacy of a historic home while upgrading essential plumbing, Mosaic tiling, and built-in cabinetry.",
-      img: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80"
+      img: "/images/services/bathrooms-main.jpg"
     },
     {
       id: 2,
@@ -17,7 +18,7 @@ const InResidence = () => {
       caption: "PERIOD KITCHENS",
       meta: "From $35,000 USD",
       desc: "Custom Craftsman shaker or Victorian beadboard kitchens that conceal modern appliances in period millwork.",
-      img: "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80"
+      img: "/images/services/kitchens-main.jpg"
     },
     {
       id: 3,
@@ -25,7 +26,7 @@ const InResidence = () => {
       caption: "HISTORIC ADUS",
       meta: "From $200,000 USD",
       desc: "Adding detached accessory structures and garage suites designed to respect historic guidelines and COA rules.",
-      img: "https://i.pinimg.com/1200x/8e/9b/b1/8e9bb1f7a2df92158f8bcfd3bb693d11.jpg"
+      img: "/images/services/adu-main.jpg"
     },
     {
       id: 4,
@@ -33,7 +34,7 @@ const InResidence = () => {
       caption: "GARAGES & CARPORTS",
       meta: "From $37,000 USD",
       desc: "Detached garages and carriage houses built to complement your residence, featuring Hardie Shingle Shake siding.",
-      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80"
+      img: "/images/services/garages-main.jpg"
     },
     {
       id: 5,
@@ -41,7 +42,7 @@ const InResidence = () => {
       caption: "HISTORIC PRESERVATION",
       meta: "Project Dependent",
       desc: "Porch restoration, lead-safe paint prep, window salvaging, and period-correct painting to enhance curb presence.",
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
+      img: "/images/services/preservation-main.jpg"
     },
   ];
 
@@ -63,7 +64,7 @@ const InResidence = () => {
         {projects.map((project) => (
           <div key={project.id} className="residence-item">
             <div className="image-wrapper">
-              <img src={project.img} alt={project.title} />
+              <img src={withBasePath(project.img)} alt={project.title} />
             </div>
             <div className="image-caption">
               {project.caption}
