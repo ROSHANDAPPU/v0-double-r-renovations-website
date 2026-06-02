@@ -11,21 +11,21 @@ const slides = [
     title: "Preserving McKinney's Architectural Legacy",
     description:
       "With roots deep in the historic neighborhoods of McKinney, Double R Renovations specializes in breathing new life into century-old homes. We combine time-honored craftsmanship with modern structural integrity to ensure your historic property stands proud for another hundred years.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    image: "/images/homepage/slider/legacy.jpg",
   },
   {
     id: 2,
     title: "The Art of the Period-Appropriate Garage",
     description:
       "Housing a classic car collection requires more than just a concrete box. We design and build detached garages and carriage houses that complement the original architectural lines of your historic residence, featuring materials like Hardie Shingle Shake and custom millwork that honor the era.",
-    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600&q=80",
+    image: "/images/homepage/slider/garage.jpg",
   },
   {
     id: 3,
     title: "Sensitive Additions & ADUs",
     description:
       "Expanding a historic home demands a delicate touch. Whether it's a detached Accessory Dwelling Unit (ADU) or a master suite addition, we ensure new construction reads as a respectful continuation of the existing narrative, adhering to strict Historic District guidelines and COA requirements.",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&q=80",
+    image: "/images/homepage/slider/adu.jpg",
   },
 ]
 

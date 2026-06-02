@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 import './Bathrooms.css';
 
 const Bathrooms = () => {
@@ -65,7 +66,7 @@ const Bathrooms = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="bath-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://kowalske.com/wp-content/uploads/2020/08/wauwatosa-remodel-2-2560x1280.jpg" alt="Luxury Bathroom" />
+            <img src={withBasePath("/images/services/inside/bathrooms/1.jpg")} alt="Luxury Bathroom" />
             <span className="caption">01 / Period Bath Restoration</span>
           </div>
 
@@ -91,7 +92,7 @@ const Bathrooms = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80" alt="Luxury Bathroom Vanity Detail" />
+            <img src={withBasePath("/images/services/inside/bathrooms/2.jpg")} alt="Luxury Bathroom Vanity Detail" />
             <span className="caption">02 / Elegant Details</span>
           </div>
         </main>
@@ -112,7 +113,7 @@ const Bathrooms = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="https://www.atlasceramics.co.uk/wp-content/uploads/2023/08/22280483_1413245302107646_5263375725670432768_n.jpg" alt="Marble Tile" />
+                <img src={withBasePath("/images/services/inside/bathrooms/3.jpg")} alt="Marble Tile" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">SURFACES</span>
@@ -130,7 +131,7 @@ const Bathrooms = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://coloradonest.com/wp-content/uploads/2024/05/close-up-primary-bath.jpg" alt="Shower Fixture" />
+                <img src={withBasePath("/images/services/inside/bathrooms/4.jpg")} alt="Shower Fixture" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">FIXTURES</span>
@@ -143,7 +144,7 @@ const Bathrooms = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://www.remodelaholic.com/wp-content/uploads/2016/01/1-1920s-cottage-with-added-dormer-for-master-bath-addition-My-Sweet-Cottage-featured-on-@Remodelaholic.jpg" alt="Vanity Cabinet" />
+                <img src={withBasePath("/images/services/inside/bathrooms/1.jpg")} alt="Vanity Cabinet" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">STORAGE</span>

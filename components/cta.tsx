@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
+import { withBasePath } from "@/lib/basePath"
 import useIntersectionObserver from "./useIntersectionObserver"
 
 export function CTA() {
@@ -14,7 +15,7 @@ export function CTA() {
       ref={sectionRef}
       className="py-24 md:py-32 text-center overflow-hidden"
       style={{
-        backgroundImage: "url('https://www.londonchimneyservices.com/wp-content/uploads/2016/02/slide4.jpg')",
+        backgroundImage: `url('${withBasePath('/images/cta/bg.jpg')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

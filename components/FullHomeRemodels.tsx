@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 import './FullHomeRemodels.css';
 
 const FullHomeRemodels = () => {
@@ -65,7 +66,7 @@ const FullHomeRemodels = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="fhr-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://static01.nyt.com/images/2019/12/22/realestate/20RENOVATIONS-promo1/20RENOVATIONS-slide-6DHV-superJumbo.jpg" alt="Historic Preservation" />
+            <img src={withBasePath("/images/services/inside/preservation/1.jpg")} alt="Historic Preservation" />
             <span className="caption">01 / Timeless Restoration</span>
           </div>
 
@@ -87,7 +88,7 @@ const FullHomeRemodels = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Beautiful Modern Home Living Room" />
+            <img src={withBasePath("/images/services/inside/preservation/2.jpg")} alt="Beautiful Modern Home Living Room" />
             <span className="caption">02 / Modern Kitchen</span>
           </div>
         </main>
@@ -108,7 +109,7 @@ const FullHomeRemodels = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="https://www.bankrate.com/2022/04/29102909/types-of-kitchen-remodels-527604950.jpg?auto=webp&optimize=high&crop=16:9" alt="Hardwood Flooring" />
+                <img src={withBasePath("/images/services/inside/preservation/3.jpg")} alt="Hardwood Flooring" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">PREMIUM FINISHES</span>
@@ -126,7 +127,7 @@ const FullHomeRemodels = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://www.turnkeykitchenrenovations.com/wp-content/uploads/2024/03/kitchen-closet-renovation.jpg" alt="Cabinetry" />
+                <img src={withBasePath("/images/services/inside/preservation/4.jpg")} alt="Cabinetry" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">CUSTOM</span>
@@ -139,7 +140,7 @@ const FullHomeRemodels = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://images.squarespace-cdn.com/content/v1/54a31443e4b0c309d00d739c/1615844292546-P393TNT1JVOM0YUJ369A/IMG_8588.jpg?format=2500w" alt="Lighting" />
+                <img src={withBasePath("/images/services/inside/preservation/5.jpg")} alt="Lighting" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">AMBIANCE</span>

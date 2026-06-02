@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 import './GeneralConstruction.css';
 
 const GeneralConstruction = () => {
@@ -65,7 +66,7 @@ const GeneralConstruction = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="gc-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1600&q=80" alt="Detached Garage" />
+            <img src={withBasePath("/images/services/inside/garages/1.jpg")} alt="Detached Garage" />
             <span className="caption">01 / Detached Garage & Carriage House</span>
           </div>
 
@@ -91,7 +92,7 @@ const GeneralConstruction = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="House Wooden Framing Construction" />
+            <img src={withBasePath("/images/services/inside/garages/2.jpg")} alt="House Wooden Framing Construction" />
             <span className="caption">02 / Precision Joinery</span>
           </div>
         </main>
@@ -113,7 +114,7 @@ const GeneralConstruction = () => {
             <div className="product-card featured">
               <div className="prod-img-box">
                 {/* Use your 'Cugino' equivalent image */}
-                <img src="https://media.istockphoto.com/id/538472632/photo/construction-worker-framing-a-building.jpg?s=612x612&w=0&k=20&c=hGR4NliMS8zw2Wu7kx4OYohGaarbz0vxqvfCTrBOPd4=" alt="Premium Lumber" />
+                <img src={withBasePath("/images/services/inside/garages/3.jpg")} alt="Premium Lumber" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">DOUBLE R SUPPLIES</span>
@@ -131,7 +132,7 @@ const GeneralConstruction = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://www.wellscustomframers.com/images/jch-optimize/ng/images_2022_09_20_general-contractor-looking-at-building-plan.webp" alt="Steel Beam" />
+                <img src={withBasePath("/images/services/inside/garages/1.jpg")} alt="Steel Beam" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">STRUCTURAL</span>
@@ -144,7 +145,7 @@ const GeneralConstruction = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://images.squarespace-cdn.com/content/v1/62886176633a120ee9377a9c/1663483066049-6BIGNQIAW72XBAGOE7OV/Carvana-2.jpg" alt="Insulation" />
+                <img src={withBasePath("/images/services/inside/garages/2.jpg")} alt="Insulation" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">ENERGY</span>

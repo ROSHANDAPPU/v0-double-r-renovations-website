@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 import './InteriorPainting.css';
 
 const InteriorPainting = () => {
@@ -65,7 +66,7 @@ const InteriorPainting = () => {
         {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
         <main className="pt-feed">
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Painted Wall" />
+            <img src={withBasePath("/images/services/inside/painting/1.jpg")} alt="Painted Wall" />
             <span className="caption">01 / Historic Colors & Finishes</span>
           </div>
 
@@ -91,7 +92,7 @@ const InteriorPainting = () => {
           </div>
 
           <div className="image-block" ref={addToRefs}>
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&q=80" alt="Interior House Painting and Finishes" />
+            <img src={withBasePath("/images/services/inside/painting/2.jpg")} alt="Interior House Painting and Finishes" />
             <span className="caption">02 / Artisan Details</span>
           </div>
         </main>
@@ -112,7 +113,7 @@ const InteriorPainting = () => {
           <div className="product-col-left">
             <div className="product-card featured">
               <div className="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1200&q=80" alt="Farrow and Ball Premium Paint Palette" />
+                <img src={withBasePath("/images/services/inside/painting/3.jpg")} alt="Farrow and Ball Premium Paint Palette" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">FINISHES</span>
@@ -130,7 +131,7 @@ const InteriorPainting = () => {
             {/* Item 1 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&q=80" alt="Venetian Plaster Textured Wall Finish" />
+                <img src={withBasePath("/images/services/inside/painting/4.jpg")} alt="Venetian Plaster Textured Wall Finish" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">TOOLS</span>
@@ -143,7 +144,7 @@ const InteriorPainting = () => {
             {/* Item 2 */}
             <div className="product-card">
               <div className="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1200&q=80" alt="Elegant Stained Oak Wood Paneling" />
+                <img src={withBasePath("/images/services/inside/painting/5.jpg")} alt="Elegant Stained Oak Wood Paneling" />
               </div>
               <div className="prod-info">
                 <span className="prod-brand">WOODWORK</span>

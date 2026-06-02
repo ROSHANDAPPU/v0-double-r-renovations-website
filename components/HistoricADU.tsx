@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 import './HistoricADU.css';
 import { Header } from './header';
 import { Footer } from './footer';
@@ -69,7 +70,7 @@ const HistoricADU = () => {
           {/* RIGHT: SCROLLABLE FEED (Main Project Images) */}
           <main className="adu-feed">
             <div className="image-block" ref={addToRefs}>
-              <img src="https://i.pinimg.com/1200x/8e/9b/b1/8e9bb1f7a2df92158f8bcfd3bb693d11.jpg" alt="Historic Carriage House ADU" />
+              <img src={withBasePath("/images/services/inside/adu/1.jpg")} alt="Historic Carriage House ADU" />
               <span className="caption">01 / Outbuilding Architecture</span>
             </div>
 
@@ -91,7 +92,7 @@ const HistoricADU = () => {
             </div>
 
             <div className="image-block" ref={addToRefs}>
-              <img src="https://normcph.com/wp-content/uploads/2023/10/NormArchitects_PavilionHouse_PhotoCredit_JonasBjerrePoulsen_LowRes_18.jpg" alt="Interior of detached studio" />
+              <img src={withBasePath("/images/services/inside/adu/2.jpg")} alt="Interior of detached studio" />
               <span className="caption">02 / Seamless Subordinate Additions</span>
             </div>
           </main>
@@ -111,7 +112,7 @@ const HistoricADU = () => {
             <div className="product-col-left">
               <div className="product-card featured">
                 <div className="prod-img-box">
-                  <img src="https://cdn.vox-cdn.com/thumbor/AfNC-ZaVF2mtc1zsFCH8lffsZ-c=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19565702/4570_University_Ave____Pierre_Galant_1.jpg" alt="Siding Materials" />
+                  <img src={withBasePath("/images/services/inside/adu/3.jpg")} alt="Siding Materials" />
                 </div>
                 <div className="prod-info">
                   <span className="prod-brand">EXTERIOR SIDING</span>
@@ -129,7 +130,7 @@ const HistoricADU = () => {
               {/* Item 1 */}
               <div className="product-card">
                 <div className="prod-img-box">
-                  <img src="https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_72-1.jpg" alt="Period Windows" />
+                  <img src={withBasePath("/images/services/inside/adu/1.jpg")} alt="Period Windows" />
                 </div>
                 <div className="prod-info">
                   <span className="prod-brand">MILLWORK</span>
@@ -142,7 +143,7 @@ const HistoricADU = () => {
               {/* Item 2 */}
               <div className="product-card">
                 <div className="prod-img-box">
-                  <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80" alt="Roofing" />
+                  <img src={withBasePath("/images/services/inside/adu/2.jpg")} alt="Roofing" />
                 </div>
                 <div className="prod-info">
                   <span className="prod-brand">ROOFING</span>

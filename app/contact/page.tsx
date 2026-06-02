@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/basePath"
 import './ContactForm.css';
 
 export default function ContactPage() {
@@ -66,7 +67,7 @@ export default function ContactPage() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/contact/hero.jpg"
+            src={withBasePath('/images/contact/hero.jpg')}
             alt="Contact background"
             className="w-full h-full object-cover"
           />

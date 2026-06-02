@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[68,["446","static/chunks/446-b613824bc59f91fe.js","744","static/chunks/744-8ceac05363d1ee73.js","220","static/chunks/app/about/page-1a54c4eeb9641e5e.js"],"default"]
+2:I[68,["446","static/chunks/446-b613824bc59f91fe.js","744","static/chunks/744-2fb5aacbb6c5ae5e.js","220","static/chunks/app/about/page-9227b83ab3d7769f.js"],"default"]
 3:I[484,[],"OutletBoundary"]
 4:"$Sreact.suspense"
-:HL["/_next/static/css/90562d3e0afd650b.css","style"]
-:HL["/_next/static/css/a4899f15cd009b9c.css","style"]
-0:{"buildId":"X-q00db3NAZqDuoWTNX4i","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/90562d3e0afd650b.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/a4899f15cd009b9c.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+:HL["/v0-double-r-renovations-website/_next/static/css/90562d3e0afd650b.css","style"]
+:HL["/v0-double-r-renovations-website/_next/static/css/a4899f15cd009b9c.css","style"]
+0:{"buildId":"yDZxHGw1foghOZvfbqhco","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/v0-double-r-renovations-website/_next/static/css/90562d3e0afd650b.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/v0-double-r-renovations-website/_next/static/css/a4899f15cd009b9c.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
